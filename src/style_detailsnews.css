@@ -154,7 +154,7 @@ p {
     filter: opacity(50%);
 }
 
-/* ========== 404 Page - Heading Section ========== */
+/* ========== Technical News - Heading Section ========== */
 .top-header{
     height: 100px;
     background-color: var(--whitecolor2);
@@ -236,9 +236,11 @@ p {
     height: 30px;
 }
 
-/* ========== 404 Page - Breadcrumb Section ========== */
+/* ========== Technical News - Breadcrumb Section ========== */
 .breadcrumb{
     height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .breadcrumb .hyperlink{
@@ -246,51 +248,96 @@ p {
     color: var(--mainColor1);
 }
 
-/* ========== 404 Page - FAQs Section ========== */
-.container-error{
-    display: block;
-    margin: auto;
-    padding: 80px 0;
-    text-align: center;
+/* ========== Technical News - News Section ========== */
+.about-us{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--mdDis);
+    width: 100%;
+    font-weight: 200;
+    padding: 0 var(--mdDis);
 }
 
-.container-error .hyperlink{
+.about-us .news-col{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    max-width: 760px;
+}
+
+.about-us .news-col p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about-us .news-col .title-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us .news-col .title-container .title-news{
+    font-family: var(--font2);
+    font-size: var(--fontSize2);
+    padding-bottom: var(--smDis);
+}
+
+.about-us .news-col .title-container .author .hyperlink{
+    font-family: var(--font1);
+    font-size: var(--fontSize4);
+    padding-bottom: var(--smDis);
+    color: var(--mainColor1);
+    font-weight: 400;
+}
+
+.about-us .news-col .news-img{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding: var(--mdDis);
+    width: 100%;
+}
+
+.about-us .news-col .see-also{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--mdDis);
+    font-weight: 600;
+    font-size: var(--fontSize3);
+}
+
+.about-us .news-col .see-also ul li a{
     text-decoration: underline;
     color: var(--mainColor1);
-} 
+    font-weight: 100;
+    font-size: var(--fontSize4);
+}
 
-.container-error .img-error{
-    height: auto;
+.about-us .ad-col{
+    background-color: var(--subwhitecolor);
+}
+
+.about-us .ad-col img{
     width: 100%;
-    max-width: 600px;
-    padding: 0 var(--mdDis);
-    padding-bottom: var(--xlDis);
+    padding: var(--mdDis);
 }
 
-.container-error .text-error{
-    margin: auto;
-    width: 100%;
-    max-width: 450px;
-    padding: 0 var(--mdDis);
-    padding-bottom: var(--mdDis);
+@media screen and (max-width: 880px) {
+    .about-us .ad-col{
+        display: none;
+    }
+
+    .about-us{
+        display: block;
+    }
 }
 
-.container-error .button-error{
-    padding: var(--smDis) var(--mdDis);
-    background-color: var(--whitecolor1);
-    border-radius: 5px;
-    border: 3px solid var(--mainColor1);
-}
-
-.container-error .button-error a{
-    color: var(--mainColor1);
-    font-weight: 500;
-}
-
-/* ========== 404 Page - Footer Section ========== */
+/* ========== Technical News - Footer Section ========== */
 .footer{
     background-color: #1289B3;
     display: block;
+    width: 100%;
 }
 
 .footer .footer-info{
