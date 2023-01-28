@@ -610,13 +610,14 @@
         padding: var(--tnDis) var(--smDis);
         font-size: var(--fontSize3);
         font-weight: 600;
+        color: var(--mediancolor);
     }
 
     .news .news-sw .swiper-slide .news-author{
         padding: var(--tnDis) var(--smDis);
         font-size: var(--fontSize4);
         font-weight: 200;
-
+        color: var(--mediancolor);
     }
 
     .news .news-pagination{
