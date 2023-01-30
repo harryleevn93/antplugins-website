@@ -154,7 +154,7 @@ p {
     filter: opacity(50%);
 }
 
-/* ========== Product Details - Heading Section ========== */
+/* ========== Blog Technical News - Heading Section ========== */
 .top-header{
     height: 100px;
     background-color: var(--whitecolor2);
@@ -236,7 +236,7 @@ p {
     height: 30px;
 }
 
-/* ========== Product Details - Breadcrumb Section ========== */
+/* ========== Blog Technical News - Breadcrumb Section ========== */
 .breadcrumb{
     height: 40px;
     display: flex;
@@ -248,12 +248,185 @@ p {
     color: var(--mainColor1);
 }
 
-/* ========== Product Details - FAQs Section ========== */
-.product-display{
+/* ========== Blog Technical News - FAQs Section ========== */
+.blogtech{
     display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    height: auto;
+    gap: var(--mdDis);
 }
 
-/* ========== Product Details - Footer Section ========== */
+.tech-column .tech-header{
+    height: 100px;
+    /* background-color: #0D0D0D; */
+    font-size: var(--fontSize2);
+    display: flex;
+    align-items: center;
+}
+
+.tech-column .tech-header .tech-header-text{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Audiowide';
+    /* background-color: #0D0D0D; */
+    padding-left: var(--mdDis);
+}
+
+.tech-column .tech-header .tech-header-text::before{
+    content: "";
+    position: absolute;
+    height: 65px;
+    width: 9px;
+    background-repeat: no-repeat;
+    background-image: url("/src/misc/Header-bar-2.png");
+    /* transform: translate(-50%, 0); */
+    /* top: -50%; */
+    left: 0px;
+}
+
+.tech-column .tech-news a{
+    display: flex;
+    gap: var(--mdDis);
+    border: var(--mediancolor) solid 2px;
+    border-radius: 15px;
+    margin: var(--mdDis) var(--smDis);
+}
+
+.tech-column .tech-news img{
+    border-radius: 14px;
+}
+
+.tech-column .tech-news .tech-news-title{
+    display: block;
+    margin: auto;
+    align-items: center;
+}
+
+.tech-column .tech-news .tech-news-title .news-headers{
+    /* width: 100%; */
+    font-size: var(--fontSize4);
+    padding-right: var(--smDis);
+    font-weight: 500;
+}
+
+.tech-column .tech-news .tech-news-title .news-author{
+    /* width: 100%; */
+    font-size: var(--fontSize5);
+    padding-right: var(--smDis);
+    font-weight: 200;
+}
+
+.tech-column .tech-news-pagination{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: var(--smDis);
+    color: var(--mainColor1);
+}
+
+.tech-column .tech-news-pagination a{
+    color: var(--mainColor1);
+    font-size: var(--fontSize3);
+}
+
+.tech-column .tech-news-pagination button{
+    height: 44px;
+    width: 44px;
+    background-color: var(--whitecolor);
+    color: var(--mainColor1);
+    font-size: var(--fontSize3);
+    font-weight: 600;
+    border-radius: 5px;
+    border: solid 3px var(--mainColor1);
+}
+
+.tech-column .tech-news-pagination .current-page{
+    background-color: var(--mainColor1);
+    color: var(--whitecolor);
+}
+
+.tech-column .tech-news-pagination .disabled{
+    color: var(--mediancolor);
+}
+
+.achieve-column{
+    height: 100%;
+}
+
+.achieve-column .achieve-header{
+    height: 100px;
+    /* background-color: #0D0D0D; */
+    font-size: var(--fontSize2);
+    display: flex;
+    align-items: center;
+}
+
+.achieve-column .achieve-header .achieve-header-text{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Audiowide';
+    /* background-color: #0D0D0D; */
+    padding-left: var(--mdDis);
+}
+
+.achieve-column .achieve-header .achieve-header-text::before{
+    content: "";
+    position: absolute;
+    height: 65px;
+    width: 9px;
+    background-repeat: no-repeat;
+    background-image: url("/src/misc/Header-bar-2.png");
+    /* transform: translate(-50%, 0); */
+    /* top: -50%; */
+    left: 0px;
+}
+
+.achieve-column .achieve-date{
+    background-color: var(--whitecolor2);
+    padding: var(--smDis);
+    display: block;
+}
+
+.achieve-column .achieve-date .year-achieve{
+    /* background-color: #0D0D0D; */
+    display: block;
+    padding-bottom: var(--smDis);
+}
+
+.achieve-column .achieve-date .year-achieve .month-achieve{
+    display: block;
+    align-items: center;
+    padding-left: var(--mdDis);
+    padding-bottom: var(--tnDis);
+}
+
+.achieve-column .achieve-date .year-achieve .month-achieve .news-achieve{
+    display: block;
+    padding-left: var(--mdDis);
+    padding-bottom: var(--tnDis);
+    padding-top: var(--tnDis);
+    font-weight: 200;
+}
+
+.month-achieve-text{
+    display: flex;
+    text-align: center;
+    gap: var(--tnDis);
+    /* justify-content: center; */
+}
+
+.year-achieve-text{
+    display: flex;
+    text-align: center;
+    gap: var(--tnDis);
+    /* justify-content: center; */
+}
+
+/* ========== Blog Technical News - Footer Section ========== */
 .footer{
     background-color: #1289B3;
     display: block;
