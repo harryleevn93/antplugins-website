@@ -596,7 +596,7 @@
     .news .news-sw .swiper-slide{
         height: 320px;
         width: 320px;
-        border: var(--mediancolor) 3px solid;
+        border: var(--mediancolor) 2px solid;
         border-radius: 10px;
         position: relative;
     }
@@ -704,7 +704,7 @@
     .products .products-sw .swiper-slide{
         height: 320px;
         width: 320px;
-        border: var(--mediancolor) 3px solid;
+        border: var(--mediancolor) 2px solid;
         border-radius: 10px;
         position: relative;
     }
@@ -729,7 +729,7 @@
 
     .products .products-sw .swiper-slide .arrow-holder{
         position: absolute;
-        border: 3px solid var(--mediancolor);
+        border: 2px solid var(--mediancolor);
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -798,7 +798,7 @@
     .brands .brands-sw .swiper-slide{
         height: 120px;
         width: 120px;
-        border: var(--mediancolor) 3px solid;
+        border: var(--mediancolor) 2px solid;
         border-radius: 10px;
         display: flex;
         justify-content: center;
@@ -837,10 +837,14 @@
     }
 
     .footer .footer-info .footer-index ul li{
-        font-size: var(--fontSize5);
-        font-weight: 100;
         padding-bottom: var(--smDis);
         padding-left: var(--smDis);
+    }
+
+    .footer .footer-info .footer-index ul li a{
+        font-size: var(--fontSize4);
+        font-weight: 200;
+        color: var(--whitecolor);
     }
 
     .footer .footer-info .footer-index ul li .title-index{

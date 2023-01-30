@@ -154,7 +154,7 @@ p {
     filter: opacity(50%);
 }
 
-/* ========== Support FAQs - Heading Section ========== */
+/* ========== Payment Carts - Heading Section ========== */
 .top-header{
     height: 100px;
     background-color: var(--whitecolor2);
@@ -236,9 +236,11 @@ p {
     height: 30px;
 }
 
-/* ========== Support FAQs - Breadcrumb Section ========== */
+/* ========== Payment Carts - Breadcrumb Section ========== */
 .breadcrumb{
-    height: 50px;
+    display: flex;
+    align-items: center;
+    height: 40px; 
 }
 
 .breadcrumb .hyperlink{
@@ -246,8 +248,13 @@ p {
     color: var(--mainColor1);
 }
 
-/* ========== Support FAQs - FAQs Section ========== */
-.faqs .faqs-headers{
+/* ========== Payment Carts - Carts Section ========== */
+.cart-payment{
+    display: block;
+    justify-content: center;
+}
+
+.cart-payment .cart-headers{
     height: 100px;
     /* background-color: #0D0D0D; */
     font-family: 'Audiowide';
@@ -257,9 +264,9 @@ p {
     justify-content: center;
 }
 
-.faqs .faqs-headers .faqs-text{
+.cart-payment .cart-headers .cart-text{
     height: 60px;
-    width: 150px;
+    width: 200px;
     position: relative;
     display: flex;
     align-items: center;
@@ -267,7 +274,7 @@ p {
     /* background-color: #0D0D0D; */
 }
 
-.faqs .faqs-headers .faqs-text::after{
+.cart-payment .cart-headers .cart-text::after{
     content: "";
     position: absolute;
     height: 5px;
@@ -282,79 +289,109 @@ p {
     /* z-index: 4; */
 }
 
-.faqs-question{
-    display: inline;
-    justify-content: center;
-    text-align: center;
-}
-
-.question-box{
-    border: var(--mediancolor) 2px solid;
-    border-radius: 15px;
-    height: auto;
+.cart-payment .cart-table table{
     width: 100%;
-    margin: var(--mdDis) 0;
-    padding-bottom: var(--mdDis);
+    padding-bottom: var(--smDis);
+    border-bottom: var(--darkcolor) 2px solid;
+    margin-bottom: var(--mdDis);
 }
 
-.question-box .question{
-    width: 100%;
-    padding: var(--mdDis) 0 var(--smDis) 0;
-    margin: auto;
-    max-width: 800px;
-}
-
-.question-box .divider{
-    background-color: var(--mainColor1);
-    width: 160px;
-    height: 3px;
-    margin: auto;
-}
-
-.question-box .answer{
-    width: 100%;
-    margin: auto;
-    max-width: 800px;
-    padding-top: var(--mdDis);
-}
-
-.faqs .faqs-pagination{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: var(--smDis);
-    color: var(--mainColor1);
-}
-
-.faqs .faqs-pagination a{
-    color: var(--mainColor1);
-    font-size: var(--fontSize3);
-}
-
-.faqs .faqs-pagination button{
-    height: 44px;
-    width: 44px;
-    background-color: var(--whitecolor);
-    color: var(--mainColor1);
-    font-size: var(--fontSize3);
-    font-weight: 600;
-    border-radius: 5px;
-    border: solid 3px var(--mainColor1);
-}
-
-.faqs .faqs-pagination .current-page{
+.cart-payment .cart-table table tr th{
+    width: auto;
     background-color: var(--mainColor1);
     color: var(--whitecolor);
+    font-weight: 500;
+    font-size: var(--fontSize4);
+    height: 40px;
 }
 
-.faqs .faqs-pagination .disabled{
-    color: var(--mediancolor);
+.cart-payment .cart-table table tr td .quantity{
+    display: flex;
+    gap: var(--smDis);
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-payment .cart-table table tr td .quantity button{
+    background-color: var(--whitecolor);
+    color: var(--mainColor1);
+    font-size: var(--fontSize2);
+    height: 40px;
+    width: 40px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.cart-payment .cart-table table tr td .quantity .num-quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 60px;
+    font-weight: 800;
+    border-radius: 5px;
+    font-size: var(--fontSize3);
+    border: 2px solid var(--darkcolor2);
+}
+
+.cart-payment .cart-table table tr .remove{
+    background-color: var(--whitecolor);
+    color: var(--mainColor1);
+    font-size: var(--fontSize2);
+    height: 40px;
+    width: 40px;
+    font-weight: 800;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-payment .cart-button{
+    display: flex;
+    gap: var(--mdDis);
+    justify-content: flex-end;
+}
+
+.cart-payment .cart-button .cancel-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    gap: var(--smDis);
+    height: 40px;
+    /* font-weight: 800; */
+    padding: 0 var(--smDis);
+    border-radius: 5px;
+    font-size: var(--fontSize4);
+    /* border: 2px solid var(--darkcolor2); */
+    border: none;
+    background-color: var(--darkcolor);
+    color: var(--whitecolor2);
+    fill: var(--whitecolor2);
+}
+
+.cart-payment .cart-button .continue-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    gap: var(--smDis);
+    height: 40px;
+    /* font-weight: 800; */
+    padding: 0 var(--smDis);
+    border-radius: 5px;
+    font-size: var(--fontSize4);
+    /* border: 2px solid var(--darkcolor2); */
+    border: none;
+    background-color: var(--mainColor1);
+    color: var(--whitecolor2);
+    fill: var(--whitecolor2);
 }
 
 
 
-/* ========== Support FAQs - Footer Section ========== */
+/* ========== Payment Carts - Footer Section ========== */
 .footer{
     background-color: #1289B3;
     display: block;

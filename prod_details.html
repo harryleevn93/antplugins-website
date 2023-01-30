@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ant Plugins Support's FAQs</title>
+    <title>Ant Plugins - Computer Speaker SoundMax A180</title>
     <meta name="Author" content="Harry Lee" />
     <meta name="Description"
         content="This Website is just for practice, I currently study at FPT Arena: https://arena.fpt.edu.vn/ Thank you" />
-    <link rel="stylesheet" href="./src/style_support_faqs.css">
-    <link
-        rel="stylesheet"
+    <link rel="stylesheet" href="./src/style_detailsprod.css">
+    <link rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./src/scripts.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon/favicon-32x32.png">
@@ -35,9 +33,9 @@
             <ul class = "reset-list list-item">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/about_us.html">Blog</a></li>
-                <li><a href="/prod_details.html">Products</a></li>
-                <li class = "active-list"><a href="/support_faqs.html">Support</a></li>
-                <li><a href="/payment_carts.html">Payment</a></li>
+                <li class = "active-list"><a href="/prod_details.html">Products</a></li>
+                <li><a href="/support_faqs.html">Support</a></li>
+                <li><a href="/index.html">Payment</a></li>
             </ul>
         </div>
 
@@ -55,96 +53,216 @@
             </div>
         </div>
     </header>
+
     <!-- ========== Breadcrumb Nagivation Section ========== -->
     <section class="breadcrumb padding-all max-container">
         <div class="link-text">
             <p>
-                Home > Support > Customer Services > <a href="" class = "hyperlink">FAQs</a>
+                Home > Products > Speaker > <a href="" class= "hyperlink" >Computer Speaker SoundMax A180</a>
             </p>
         </div>
     </section>
+    <!-- ========== Products Details Section ========== -->
+    <section class="products-details padding-all max-container">
+        <div class = "products-display">
+            <div class="left-col">
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/src/product.details/A180.SoundMax-1.webp" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/product.details/A180.SoundMax-2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/product.details/A180.SoundMax-3.jpg" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/src/product.details/A180.SoundMax-1.webp" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/product.details/A180.SoundMax-2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/product.details/A180.SoundMax-3.jpg" />
+                        </div>
+                    </div>
+                </div>    
+            </div>
 
-    <!-- ========== FAQ Section ========== -->
-    <section class="faqs padding-all max-container">
-        <div class="faqs-headers">
-            <p class="faqs-text">
-                FAQs
-            </p>
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    loop: true,
+                    spaceBetween: 10,
+                    slidesPerView: 4,
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                });
+
+                var swiper2 = new Swiper(".mySwiper2", {
+                    loop: true,
+                    spaceBetween: 10,
+                    navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+
+                    },
+                    thumbs: {
+                        swiper: swiper,
+                    },
+                });
+            </script>
+
+            <div class="right-col">
+                <div class="products-description">
+                    <div class="products-name">
+                        SoundMax A180 2.0
+                    </div>
+
+                    <div class="products-intro">
+                        The SoundMax A-180 is a compact, lightweight design featuring just two luxurious speakers that stand out from your desk. The volume control is designed in front of the speaker so you can adjust quickly. With 10W speaker power , the sound of the SoundMax A-180 is quite powerful, clear enough to used for such as computers, laptops, mobile phones, ... <br>
+                        <br>
+                        The connection of the A-180 is quite simple with a 3.5mm jack or bluetooth and DC 5V power is extremely common.
+                        At very low cost, SoundMax A-180 will give you great entertainment space.
+                    </div>
+
+                    <div class="products-price">
+                        14.87$
+                    </div>
+
+                    <div class="products-button">
+                        <div class="quantity">
+                            <p> 
+                                <strong>Quantity:</strong>
+                            </p>
+
+                            <button class="subtract">
+                                -
+                            </button>
+
+                            <div class = "num-quantity">
+                                1
+                            </div>
+
+                            <button class="add">
+                                +
+                            </button>
+                        </div>
+
+                        <button class="add-to-cart">
+                            Add to Carts
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26" height="26">
+                                <path d="M15.40625 13L6.820313 4.234375C6.4375 3.84375 6.441406 3.21875 6.828125 2.828125L8.363281 1.292969C8.757813 0.902344 9.390625 0.902344 9.78125 1.296875L20.707031 12.292969C20.902344 12.488281 21 12.742188 21 13C21 13.257813 20.902344 13.511719 20.707031 13.707031L9.78125 24.703125C9.390625 25.097656 8.757813 25.097656 8.363281 24.707031L6.828125 23.171875C6.441406 22.78125 6.4375 22.15625 6.820313 21.765625Z"/>
+                              </svg>
+                        </button>
+                    </div>
+
+                    <div class="products-spec">
+                        <p> 
+                            <strong>Specification:</strong>
+                        </p>
+                                                
+                        <table>
+                            <tr class = "char-name">
+                                <td>Speaker Type:</td>
+                                <td>Computer Speakers</td>
+                            </tr>
+
+                            <tr class = "char-name">
+                                <td>Connect Type:</td>
+                                <td>3.5mm Jack, Bluetooth</td>
+                            </tr>
+
+                            <tr class = "char-name">
+                                <td>Power:</td>
+                                <td>10W</td>
+                            </tr>
+
+                            <tr class = "char-name">
+                                <td>Compatibility:</td>
+                                <td>Perfect Compatibility with many devices</td>
+                            </tr>
+
+                            <tr class = "char-name">
+                                <td>Brands:</td>
+                                <td>SoundMax</td>
+                            </tr>
+
+                            <tr class = "char-name">
+                                <td>Origin:</td>
+                                <td>China</td>
+                            </tr>
+
+                            <tr class = "char-name">
+                                <td>Warranty:</td>
+                                <td>12 Months</td>
+                            </tr>
+                        </table>
+
+                        <a href="" class = "hyperlink">
+                            Click here for Detailed Specification.
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="faqs-question">
-            <div class="question-box">
-                <p class="question">
-                    Where can I download the latest driver for my product?
-                </p>
+        <div class="feature-headers">
+            <p class="feature-text">Features</p>
+        </div>
 
-                <div class="divider"></div>
-
-                <p class="answer">
-                    The latest available product driver is available in the Downloads section on the respective product page.<br> Simply search by model name and download the driver from its product page, or visit our Support pages.
+        <div class="products-feature">
+            <div class="feature1">
+                <p>
+                    Not only has a compact and luxurious design, the SoundMax A180 computer speaker also has two rectangular speakers with wireless connectivity to help bring the most convenient listening experience to users.
                 </p>
             </div>
 
-            <div class="question-box">
-                <p class="question">
-                    Where can I download the user manual for my product?
+            <div class="feature2">
+                <p>
+                    <strong> Compact and elegant </strong> <br>
+                    <br>
+                    SoundMax A180 easily impresses anyone at first sight. The computer speaker has a compact design consisting of two small rectangular box speakers with dimensions of 80x100x180mm, allowing you to easily optimize the installation location. <br>
+                    <br> 
+                    Besides, the front of each satellite speaker is finished in a high-class mesh, ensuring an extremely modern and luxurious music space for your desk.<br>
                 </p>
+                <img src="/src/news/details-prod-1.png" alt="">
+            </div>
 
-                <div class="divider"></div>
-
-                <p class="answer display-none">
-                    The Quick Start Guide is available in the Downloads section on the respective product page. <br> Simply search by model name and download the user manual from its product page, or visit our Support pages.
+            <div class="feature3">
+                <img src="/src/news/details-prod-2.png" alt="">
+                <p>
+                    <strong> User-friendly design </strong> <br>
+                    <br>
+                    On the front left satellite speaker of SoundMax A180, the manufacturer has integrated a hard button control panel with 4 buttons and each button supports adjusting many different functions. <br>
+                    <br>
+                    Through these buttons, you can quickly adjust play/pause, skip/forward, increase/decrease volume, change input, or activate LED lights. Therefore, SoundMax's computer speakers bring great convenience to users during use.<br>
                 </p>
             </div>
 
-            <div class="question-box">
-                <p class="question">
-                    How long is warranty period for Ant Plugins's products?
-                </p>
-
-                <div class="divider"></div>
-
-                <p class="answer display-none">
-                    Ant Plugins's offers a warranty to the original purchaser from an authorized retailer. <br> Your product is covered against manufacturing defects under the terms and conditions of this warranty for a period of 2 years from the date of the original purchase if purchased from an official retailer.
+            <div class="feature4">
+                <p>
+                    <strong> Convenient Bluetooth Connection </strong> <br>
+                    SoundMax A180 is equipped with a 3.5mm connector, allowing you to easily connect the speaker to different audio output devices such as TVs, computers, laptops, smartphones... <br>
+                    <br>
+                    In addition, computer speakers It also supports Bluetooth wireless technology that makes music playback from devices such as smartphones or tablets simpler than ever.<br>
                 </p>
             </div>
 
-            <div class="question-box">
-                <p class="question">
-                    Where can I find the product serial number?
-                </p>
-
-                <div class="divider"></div>
-
-                <p class="answer display-none">
-                    The serial number can be generally found on the bottom side of every product.
-                </p>
-            </div>
-
-            <div class="question-box">
-                <p class="question">
-                    Do I have to unplug the receiver and turn off the device when I am not using it?
-                </p>
-
-                <div class="divider"></div>
-
-                <p class="answer display-none">
-                    You do not have to turn the mouse/ keyboard off every time you stop using it. When the product is not moving or there is no signal from the USB receiver, it will automatically turn sleep-mode on to save battery power. <br> When you complete work with the product for the day, we do recommend to use the On/Off power button to optimize the battery life.
+            <div class="feature5">
+                <p>
+                    <strong> The sound quality is clear, quite powerful </strong> <br>
+                    The power of the SoundMax A180 computer speaker is 10W, so you can rest assured that the speaker will provide quite powerful sound that is enough to satisfy entertainment needs in moderate spaces.<br>
+                    <br>
+                    Besides, the manufacturer has also tweaked so that the sound to the listener's ears is always clear and pleasant, ensuring the speaker is suitable for playing any type of music. With an extremely comfortable price, SoundMax A180 will create a great entertainment space.<br>
                 </p>
             </div>
         </div>
-
-        <div class="faqs-pagination">
-            <a href="" class = "disabled">&#8810; Prev</a>
-            <button class = "current-page">1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <p>...</p>
-            <button>99</button>
-            <a href="">Next &#8811;</a>
-        </div>
-
     </section>
 
     <!-- ========== Footer Section ========== -->
@@ -187,7 +305,7 @@
                     <li>
                         <p class="title-index">Blogs</p>
                     </li>
-                    <li><a href="./about_us.html">> About Us</a></li>
+                    <li><a href="/about_us.html">> About Us</a></li>
                     <li><a href="">> Career</a></li>
                     <li><a href="./contact_us.html">> Contact Us</a></li>
                     <li><a href="">> Tech News</a></li>

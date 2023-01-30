@@ -337,7 +337,6 @@ p {
 .footer{
     background-color: #1289B3;
     display: block;
-    width: 100%;
 }
 
 .footer .footer-info{
@@ -366,10 +365,14 @@ p {
 }
 
 .footer .footer-info .footer-index ul li{
-    font-size: var(--fontSize5);
-    font-weight: 100;
     padding-bottom: var(--smDis);
     padding-left: var(--smDis);
+}
+
+.footer .footer-info .footer-index ul li a{
+    font-size: var(--fontSize4);
+    font-weight: 200;
+    color: var(--whitecolor);
 }
 
 .footer .footer-info .footer-index ul li .title-index{

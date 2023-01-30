@@ -154,7 +154,7 @@ p {
     filter: opacity(50%);
 }
 
-/* ========== Support FAQs - Heading Section ========== */
+/* ========== Product Details - Heading Section ========== */
 .top-header{
     height: 100px;
     background-color: var(--whitecolor2);
@@ -236,9 +236,11 @@ p {
     height: 30px;
 }
 
-/* ========== Support FAQs - Breadcrumb Section ========== */
+/* ========== Product Details - Breadcrumb Section ========== */
 .breadcrumb{
-    height: 50px;
+    display: flex;
+    align-items: center;
+    height: 40px; 
 }
 
 .breadcrumb .hyperlink{
@@ -246,8 +248,196 @@ p {
     color: var(--mainColor1);
 }
 
-/* ========== Support FAQs - FAQs Section ========== */
-.faqs .faqs-headers{
+/* ========== Product Details - FAQs Section ========== */
+.products-details{
+    display: block;
+    padding-top: 0px;
+}
+
+.products-display{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--lgDis);
+    width: 100%;
+    font-weight: 200;
+    /* background-color: #404040; */
+}
+
+.products-display .left-col{
+    display: block;
+    max-width: 550px;
+}
+
+.products-display .left-col .swiper {
+    width: 100%;
+    height: auto;
+}
+
+.products-display .left-col .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+.left-col .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.left-col .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-col .swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.left-col .mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.left-col .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.left-col .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.left-col .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.products-display .right-col{
+    width: 100%;
+    max-width: 800px;
+    display: block;
+}
+
+.products-display .right-col .products-intro{
+    padding-top: var(--smDis);
+    padding-bottom: var(--smDis);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.products-display .right-col .products-price{
+    background-color: var(--subwhitecolor);
+    font-size: var(--fontSize1);
+    /* font-family: var(--font1); */
+    font-weight: 500;
+    padding: var(--smDis);
+    color: var(--mainColor1)
+}
+
+.products-display .right-col .products-button{
+    padding-top: var(--smDis);
+    padding-bottom: var(--smDis);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-display .right-col .products-button .quantity{
+    display: flex;
+    gap: var(--smDis);
+    align-items: center;
+}
+
+.products-display .right-col .products-button .quantity button{
+    background-color: var(--whitecolor);
+    color: var(--mainColor1);
+    font-size: var(--fontSize2);
+    height: 40px;
+    width: 40px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.products-display .right-col .products-button .quantity .num-quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 60px;
+    font-weight: 800;
+    border-radius: 5px;
+    font-size: var(--fontSize3);
+    border: 2px solid var(--darkcolor2);
+}
+
+.products-display .right-col .products-button .add-to-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    gap: var(--smDis);
+    height: 40px;
+    /* font-weight: 800; */
+    padding: 0 var(--smDis);
+    border-radius: 5px;
+    font-size: var(--fontSize4);
+    /* border: 2px solid var(--darkcolor2); */
+    border: none;
+    background-color: var(--mainColor1);
+    color: var(--whitecolor2);
+    fill: var(--whitecolor2);
+}
+
+.products-display .right-col .products-name{
+    font-family: var(--font2);
+    font-size: var(--fontSize2);
+}
+
+.products-display .right-col .products-spec{
+    display: block;
+    width: 100%;
+}
+
+.products-display .right-col .products-spec table{
+    width: 100%;
+    margin: var(--smDis) 0;
+    border: none;
+    border-collapse: collapse;
+}
+
+.products-display .right-col .products-spec table tr:nth-child(even) {
+    background-color: var(--subwhitecolor);
+}
+
+.products-display .right-col .products-spec table tr td:first-child{
+    border-right: 2px solid var(--mediancolor);
+    width: fit-content;
+}
+
+.products-display .right-col .products-spec table tr td:last-child{
+    padding-left: var(--smDis);
+}
+
+.products-display .right-col .products-spec .hyperlink{
+    margin-top: var(--smDis);
+    text-align: center;
+    display: block;
+    font-size: var(--fontSize5);
+    text-decoration: underline;
+    color: var(--mainColor1);
+}
+
+.products-details .feature-headers{
     height: 100px;
     /* background-color: #0D0D0D; */
     font-family: 'Audiowide';
@@ -257,7 +447,7 @@ p {
     justify-content: center;
 }
 
-.faqs .faqs-headers .faqs-text{
+.products-details .feature-headers .feature-text{
     height: 60px;
     width: 150px;
     position: relative;
@@ -267,7 +457,7 @@ p {
     /* background-color: #0D0D0D; */
 }
 
-.faqs .faqs-headers .faqs-text::after{
+.products-details .feature-headers .feature-text::after{
     content: "";
     position: absolute;
     height: 5px;
@@ -282,79 +472,84 @@ p {
     /* z-index: 4; */
 }
 
-.faqs-question{
-    display: inline;
-    justify-content: center;
-    text-align: center;
+.products-details .products-feature{
+    display: block;
+    font-weight: 200;
 }
 
-.question-box{
-    border: var(--mediancolor) 2px solid;
-    border-radius: 15px;
-    height: auto;
-    width: 100%;
-    margin: var(--mdDis) 0;
-    padding-bottom: var(--mdDis);
-}
-
-.question-box .question{
-    width: 100%;
-    padding: var(--mdDis) 0 var(--smDis) 0;
-    margin: auto;
-    max-width: 800px;
-}
-
-.question-box .divider{
-    background-color: var(--mainColor1);
-    width: 160px;
-    height: 3px;
-    margin: auto;
-}
-
-.question-box .answer{
-    width: 100%;
-    margin: auto;
-    max-width: 800px;
-    padding-top: var(--mdDis);
-}
-
-.faqs .faqs-pagination{
+.products-details .products-feature .feature1{
     display: flex;
-    width: 100%;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    gap: var(--smDis);
-    color: var(--mainColor1);
+    background-color: var(--whitecolor2);
+    width: 100%;
+    padding: var(--xlDis) 0;
 }
 
-.faqs .faqs-pagination a{
-    color: var(--mainColor1);
-    font-size: var(--fontSize3);
+.products-details .products-feature .feature1 p{
+    max-width: 650px;
 }
 
-.faqs .faqs-pagination button{
-    height: 44px;
-    width: 44px;
-    background-color: var(--whitecolor);
-    color: var(--mainColor1);
-    font-size: var(--fontSize3);
-    font-weight: 600;
-    border-radius: 5px;
-    border: solid 3px var(--mainColor1);
+.products-details .products-feature .feature2{
+    display: flex;
+    gap: var(--xlDis);
+    padding: var(--xlDis);
+    background-color: var(--maincolor1L);
+    color: var(--whitecolor);
+    justify-content: center;
 }
 
-.faqs .faqs-pagination .current-page{
-    background-color: var(--mainColor1);
+.products-details .products-feature .feature2 p{
+    display: block;
+    margin: auto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.products-details .products-feature .feature3{
+    display: flex;
+    gap: var(--xlDis);
+    padding: var(--xlDis);
+    background-color: var(--whitecolor2);
+    color: var(--darkcolor2);
+    justify-content: center;
+}
+
+.products-details .products-feature .feature3 p{
+    display: block;
+    margin: auto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.products-details .products-feature .feature4{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--maincolor1L);
+    width: 100%;
+    padding: var(--xlDis) 0;
     color: var(--whitecolor);
 }
 
-.faqs .faqs-pagination .disabled{
-    color: var(--mediancolor);
+.products-details .products-feature .feature4 p{
+    max-width: 650px;
 }
 
+.products-details .products-feature .feature5{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--whitecolor2);
+    width: 100%;
+    padding: var(--xlDis) 0;
+}
 
+.products-details .products-feature .feature5 p{
+    max-width: 650px;
+}
 
-/* ========== Support FAQs - Footer Section ========== */
+/* ========== Product Details - Footer Section ========== */
 .footer{
     background-color: #1289B3;
     display: block;
