@@ -336,8 +336,9 @@ p {
 .details-news .news-col .news-img{
     display: flex;
     margin: auto;
+    object-fit: cover;
     align-items: center;
-    padding: var(--mdDis);
+    padding: 0 var(--mdDis);
     width: 100%;
 }
 

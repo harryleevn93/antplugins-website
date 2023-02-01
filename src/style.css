@@ -283,307 +283,146 @@ p {
     }
 }
 
-    /* ========== Homepage - Top-Banner Section ========== */
-    .top-banner{
-        height: 600px;
-        width: 100%;
-        /* z-index: -1; */
-        /* background-color: var(--darkcolor); */
-    }
+/* ========== Homepage - Top-Banner Section ========== */
+.top-banner{
+    height: 600px;
+    width: 100%;
+    /* z-index: -1; */
+    /* background-color: var(--darkcolor); */
+}
 
-    .top-banner .swiper{
-        /* z-index: -1; */
-        height: 600px;
-        width: 100%;
-    }
+.top-banner .swiper{
+    /* z-index: -1; */
+    height: 600px;
+    width: 100%;
+}
 
-    .top-banner .banner1{
-        background-image: url("/src/banner.img/banner1.png");
-        position: relative;
+.top-banner .banner1{
+    background-image: url("/src/banner.img/banner1.png");
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: var(--xlDis);
+}
+
+.top-banner .banner2{
+    background-image: url("/src/banner.img/banner2.png");
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: var(--xlDis);
+}
+
+.top-banner .banner3{
+    background-image: url("/src/banner.img/banner3.png");
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: var(--xlDis);
+}
+
+.top-banner .banner4{
+    background-image: url("/src/banner.img/banner4.png");
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: var(--xlDis);
+}
+
+.top-banner .banner5{
+    background-image: url("/src/banner.img/banner5.png");
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: var(--xlDis);
+}
+
+.top-banner .swiper-slide .banner-content{
+    display: flex;
+    flex-direction: column;
+    gap: var(--smDis);
+    margin: 0 --mdDis;
+    /* min-width: 600px; */
+    width: 100%;
+}
+
+.top-banner .swiper-slide .title-banner{
+    /* background-color: tomato; */
+    /* height: auto; */
+    /* width: auto; */
+    /* max-width: 600px; */
+    font-family: var(--font2);
+    display: block;
+    font-size: var(--fontSize1);
+    color: var(--whitecolor);
+    /* position: absolute; */
+    /* top: 38%; */
+}
+
+.top-banner .swiper-slide .description-banner{
+    /* background-color: tomato; */
+    /* height: auto; */
+    /* width: auto; */
+    /* max-width: 600px; */
+    display: block;
+    color: var(--whitecolor);
+    /* position: absolute; */
+    /* top: 48%; */
+}
+
+.top-banner .swiper-slide .banner-button{
+    display: block;
+    /* margin: auto; */
+    background-color: var(--maincolor1D);
+    border: var(--whitecolor2) solid 3px;
+    border-radius: 5px;
+    height: 48px;
+    width: 150px;
+    /* max-width: 600px; */
+    color: var(--whitecolor);
+    font-size: var(--fontSize3);
+    /* position: absolute; */
+    /* top: 55%; */
+}
+
+.top-banner .swiper-slide .banner-button a{
+    color: var(--whitecolor);
+    font-size: var(--fontSize3);
+}
+
+.top-banner .swiper-slide .small-text-banner{
+    position: absolute;
+    bottom: 14px;
+    left: 165px;
+    color: var(--whitecolor);
+}
+
+.top-banner .swiper-pagination{
+    text-align: left;
+    padding-left: var(--mdDis);
+}
+
+.top-banner .swiper-pagination .swiper-pagination-bullet{
+    height: 20px;
+    width: 20px;
+    border: var(--whitecolor2) 2px solid;
+    border-radius: 5px;
+}
+
+/*  */
+
+@media (max-width: 880px){
+    .top-banner .swiper-slide .banner-content{
         display: flex;
-        align-items: center;
-        padding-left: var(--xlDis);
-        
+        text-align: center;
+        justify-content: center;
     }
 
-    .top-banner .banner1 .title-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        font-family: var(--font2);
-        font-size: var(--fontSize1);
-        color: var(--whitecolor);
-        position: absolute;
-        top: 38%;
+    .top-banner .swiper-slide .banner-content .banner-button{
+        display: block;
+        margin: auto;
     }
-
-    .top-banner .banner1 .description-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        color: var(--whitecolor);
-        position: absolute;
-        top: 48%;
-    }
-
-    .top-banner .banner1 .banner-button{
-        background-color: var(--maincolor1D);
-        border: var(--whitecolor2) solid 3px;
-        border-radius: 5px;
-        height: 48px;
-        width: 150px;
-        max-width: 600px;
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-        position: absolute;
-        top: 55%;
-    }
-
-    .top-banner .banner1 .banner-button a{
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-    }
-
-    .top-banner .banner1 .small-text-banner{
-        position: absolute;
-        bottom: 14px;
-        left: 165px;
-        color: var(--whitecolor);
-    }
-
-    .top-banner .banner2{
-        background-image: url("/src/banner.img/banner2.png");
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: var(--xlDis);
-    }
-
-    .top-banner .banner2 .title-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        font-family: var(--font2);
-        font-size: var(--fontSize1);
-        color: var(--whitecolor);
-        position: absolute;
-        top: 38%;
-    }
-
-    .top-banner .banner2 .description-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        color: var(--whitecolor);
-        position: absolute;
-        top: 48%;
-    }
-
-    .top-banner .banner2 .banner-button{
-        background-color: var(--maincolor1D);
-        border: var(--whitecolor2) solid 3px;
-        border-radius: 5px;
-        height: 48px;
-        width: 150px;
-        max-width: 600px;
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-        position: absolute;
-        top: 55%;
-    }
-
-    .top-banner .banner2 .banner-button a{
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-    }
-
-    .top-banner .banner2 .small-text-banner{
-        position: absolute;
-        bottom: 14px;
-        left: 165px;
-        color: var(--whitecolor);
-    }
-
-    .top-banner .banner3{
-        background-image: url("/src/banner.img/banner3.png");
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: var(--xlDis);
-    }
-
-    .top-banner .banner3 .title-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        font-family: var(--font2);
-        font-size: var(--fontSize1);
-        color: var(--whitecolor);
-        position: absolute;
-        top: 38%;
-    }
-
-    .top-banner .banner3 .description-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        color: var(--whitecolor);
-        position: absolute;
-        top: 48%;
-    }
-
-    .top-banner .banner3 .banner-button{
-        background-color: var(--maincolor1D);
-        border: var(--whitecolor2) solid 3px;
-        border-radius: 5px;
-        height: 48px;
-        width: 150px;
-        max-width: 600px;
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-        position: absolute;
-        top: 55%;
-    }
-
-    .top-banner .banner3 .banner-button a{
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-    }
-
-    .top-banner .banner3 .small-text-banner{
-        position: absolute;
-        bottom: 14px;
-        left: 165px;
-        color: var(--whitecolor);
-    }
-
-    .top-banner .banner4{
-        background-image: url("/src/banner.img/banner4.png");
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: var(--xlDis);
-    }
-
-    .top-banner .banner4 .title-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        font-family: var(--font2);
-        font-size: var(--fontSize1);
-        color: var(--whitecolor);
-        position: absolute;
-        top: 38%;
-    }
-
-    .top-banner .banner4 .description-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        color: var(--whitecolor);
-        position: absolute;
-        top: 48%;
-    }
-
-    .top-banner .banner4 .banner-button{
-        background-color: var(--maincolor1D);
-        border: var(--whitecolor2) solid 3px;
-        border-radius: 5px;
-        height: 48px;
-        width: 150px;
-        max-width: 600px;
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-        position: absolute;
-        top: 55%;
-    }
-
-    .top-banner .banner4 .banner-button a{
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-    }
-
-    .top-banner .banner4 .small-text-banner{
-        position: absolute;
-        bottom: 14px;
-        left: 165px;
-        color: var(--whitecolor);
-    }
-
-    .top-banner .banner5{
-        background-image: url("/src/banner.img/banner5.png");
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: var(--xlDis);
-    }
-
-    .top-banner .banner5 .title-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        font-family: var(--font2);
-        font-size: var(--fontSize1);
-        color: var(--whitecolor);
-        position: absolute;
-        top: 38%;
-    }
-
-    .top-banner .banner5 .description-banner{
-        /* background-color: tomato; */
-        height: auto;
-        width: auto;
-        max-width: 600px;
-        color: var(--whitecolor);
-        position: absolute;
-        top: 48%;
-    }
-
-    .top-banner .banner5 .banner-button{
-        background-color: var(--maincolor1D);
-        border: var(--whitecolor2) solid 3px;
-        border-radius: 5px;
-        height: 48px;
-        width: 150px;
-        max-width: 600px;
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-        position: absolute;
-        top: 55%;
-    }
-
-    .top-banner .banner5 .banner-button a{
-        color: var(--whitecolor);
-        font-size: var(--fontSize3);
-    }
-
-    .top-banner .banner5 .small-text-banner{
-        position: absolute;
-        bottom: 14px;
-        left: 165px;
-        color: var(--whitecolor);
-    }
-
-    .top-banner .swiper-pagination{
-        text-align: left;
-        padding-left: var(--mdDis);
-    }
-
-    .top-banner .swiper-pagination .swiper-pagination-bullet{
-        height: 20px;
-        width: 20px;
-        border: var(--whitecolor2) 2px solid;
-        border-radius: 5px;
-    }
+}
 
     /* ========== Homepage - News Section ========== */
     .news .news-headers{

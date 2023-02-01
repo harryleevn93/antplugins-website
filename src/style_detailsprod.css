@@ -393,6 +393,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--smDis);
 }
 
 .products-display .right-col .products-button .quantity{
