@@ -15,7 +15,16 @@
     <link rel="manifest" href="/src/favicon/site.webmanifest">
 </head>
 <body>
+    <!-- ========== Header Section ========== -->
     <header class="top-header padding-all max-container">
+        <button class="menu-button">
+            <svg>
+                <rect class="top" width="26" height="3" x="2" y="5"></rect>
+                <rect class="mid" width="26" height="3" x="2" y="13"></rect>
+                <rect class="bot" width="26" height="3" x="2" y="21"></rect>
+            </svg>
+        </button>
+        
         <div class="logo">
             <a class = "desktop-logo" href="/index.html"><img height = "60" src="/src/logo/logo.desktop.png" alt="Logo Desktop"></a>
 
@@ -27,7 +36,7 @@
         <div class="menu">
             <ul class = "reset-list list-item">
                 <li><a href="/index.html">Home</a></li>
-                <li class="active-list"><a href="/blog_technews.html">Blog</a></li>
+                <li class = "active-list"><a href="/blog_technews.html">Blog</a></li>
                 <li><a href="/products.html">Products</a></li>
                 <li><a href="/support_faqs.html">Support</a></li>
                 <li><a href="/payment_carts.html">Payment</a></li>
@@ -64,6 +73,10 @@
                 <p class="tech-header-text">
                     Technology News
                 </p>
+
+                <button class="achieve-button display-none">
+                    Achieve
+                </button>
             </div>
 
             <div class="tech-news">
@@ -123,6 +136,12 @@
                 <p>...</p>
                 <button>99</button>
                 <a href="">Next &#8811;</a>
+            </div>
+
+            <div class="display-none tech-news-pagination-mobile">
+                <button> &#8810;</button>
+                <p>1 / 100</p>
+                <button class="active-button"> &#8811; </button>
             </div>
         </div>
 
@@ -225,9 +244,11 @@
     <footer class="footer max-container padding-all">
         <div class="footer-info">
             <div class="company-description">
-                <a href="/index.html">
-                    <img class="company-logo" src="./src/logo/logo.desktop_white.png" alt="">
-                </a>
+                <div>
+                    <a href="/index.html">
+                        <img class="company-logo" src="./src/logo/logo.desktop_white.png" alt="">
+                    </a>
+                </div>
 
                 <div class="company-social">
                     <a href="/404.html">
@@ -297,7 +318,7 @@
 
         <div class="footer-copyright">
             <p>© 2022 - Ant Plugins, All Rights Reserved.</p>
-            <button class="back-to-top">
+            <button class="back-to-top" id="top-Btn" onclick="topFunction()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="30" height="30">
                     <path
                         d="M13 6.171875L3.585938 15.585938L6.414063 18.414063L13 11.828125L19.585938 18.414063L22.414063 15.585938Z"
@@ -307,5 +328,6 @@
             </button>
         </div>
     </footer>
+    <script src="/src/scripts.js"></script>
 </body>
 </html>

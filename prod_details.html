@@ -21,6 +21,14 @@
 <body>
     <!-- ========== Header Section ========== -->
     <header class="top-header padding-all max-container">
+        <button class="menu-button">
+            <svg>
+                <rect class="top" width="26" height="3" x="2" y="5"></rect>
+                <rect class="mid" width="26" height="3" x="2" y="13"></rect>
+                <rect class="bot" width="26" height="3" x="2" y="21"></rect>
+            </svg>
+        </button>
+        
         <div class="logo">
             <a class = "desktop-logo" href="/index.html"><img height = "60" src="/src/logo/logo.desktop.png" alt="Logo Desktop"></a>
 
@@ -33,7 +41,7 @@
             <ul class = "reset-list list-item">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/blog_technews.html">Blog</a></li>
-                <li class = "active-list"><a href="/products.html">Products</a></li>
+                <li class="active-list"><a href="/products.html">Products</a></li>
                 <li><a href="/support_faqs.html">Support</a></li>
                 <li><a href="/payment_carts.html">Payment</a></li>
             </ul>
@@ -58,7 +66,7 @@
     <section class="breadcrumb padding-all max-container">
         <div class="link-text">
             <p>
-                Home > Products > Speaker > <a href="" class= "hyperlink" >Computer Speaker SoundMax A180</a>
+                Home > Products > Speaker > <a href="" class= "hyperlink" >Speaker SoundMax A180</a>
             </p>
         </div>
     </section>
@@ -226,7 +234,6 @@
             <div class="feature2">
                 <p>
                     <strong> Compact and elegant </strong> <br>
-                    <br>
                     SoundMax A180 easily impresses anyone at first sight. The computer speaker has a compact design consisting of two small rectangular box speakers with dimensions of 80x100x180mm, allowing you to easily optimize the installation location. <br>
                     <br> 
                     Besides, the front of each satellite speaker is finished in a high-class mesh, ensuring an extremely modern and luxurious music space for your desk.<br>
@@ -238,7 +245,7 @@
                 <img src="/src/news/details-prod-2.png" alt="">
                 <p>
                     <strong> User-friendly design </strong> <br>
-                    <br>
+
                     On the front left satellite speaker of SoundMax A180, the manufacturer has integrated a hard button control panel with 4 buttons and each button supports adjusting many different functions. <br>
                     <br>
                     Through these buttons, you can quickly adjust play/pause, skip/forward, increase/decrease volume, change input, or activate LED lights. Therefore, SoundMax's computer speakers bring great convenience to users during use.<br>
@@ -248,6 +255,7 @@
             <div class="feature4">
                 <p>
                     <strong> Convenient Bluetooth Connection </strong> <br>
+                    <br>
                     SoundMax A180 is equipped with a 3.5mm connector, allowing you to easily connect the speaker to different audio output devices such as TVs, computers, laptops, smartphones... <br>
                     <br>
                     In addition, computer speakers It also supports Bluetooth wireless technology that makes music playback from devices such as smartphones or tablets simpler than ever.<br>
@@ -257,6 +265,8 @@
             <div class="feature5">
                 <p>
                     <strong> The sound quality is clear, quite powerful </strong> <br>
+                    <br>
+
                     The power of the SoundMax A180 computer speaker is 10W, so you can rest assured that the speaker will provide quite powerful sound that is enough to satisfy entertainment needs in moderate spaces.<br>
                     <br>
                     Besides, the manufacturer has also tweaked so that the sound to the listener's ears is always clear and pleasant, ensuring the speaker is suitable for playing any type of music. With an extremely comfortable price, SoundMax A180 will create a great entertainment space.<br>
@@ -269,9 +279,11 @@
     <footer class="footer max-container padding-all">
         <div class="footer-info">
             <div class="company-description">
-                <a href="/index.html">
-                    <img class="company-logo" src="./src/logo/logo.desktop_white.png" alt="">
-                </a>
+                <div>
+                    <a href="/index.html">
+                        <img class="company-logo" src="./src/logo/logo.desktop_white.png" alt="">
+                    </a>
+                </div>
 
                 <div class="company-social">
                     <a href="/404.html">
@@ -341,7 +353,7 @@
 
         <div class="footer-copyright">
             <p>© 2022 - Ant Plugins, All Rights Reserved.</p>
-            <button class="back-to-top">
+            <button class="back-to-top" id="top-Btn" onclick="topFunction()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="30" height="30">
                     <path
                         d="M13 6.171875L3.585938 15.585938L6.414063 18.414063L13 11.828125L19.585938 18.414063L22.414063 15.585938Z"
@@ -351,5 +363,6 @@
             </button>
         </div>
     </footer>
+    <script src="/src/scripts.js"></script>
 </body>
 </html>

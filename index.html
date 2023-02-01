@@ -22,19 +22,24 @@
 <body>
     <!-- ========== Header Section ========== -->
     <header class="top-header padding-all max-container">
+        <button class="menu-button">
+            <svg>
+                <rect class="top" width="26" height="3" x="2" y="5"></rect>
+                <rect class="mid" width="26" height="3" x="2" y="13"></rect>
+                <rect class="bot" width="26" height="3" x="2" y="21"></rect>
+            </svg>
+        </button>
+        
         <div class="logo">
-            <a class="desktop-logo" href="/index.html"><img height="60" src="/src/logo/logo.desktop_white.png"
-                    alt="Logo Desktop"></a>
+            <a class = "desktop-logo" href="/index.html"><img height = "60" src="/src/logo/logo.desktop_white.png" alt="Logo Desktop"></a>
 
-            <a class="tablet-logo display-none" href="/index.html"><img height="60" src="/src/logo/logo.desktop_white.png"
-                    alt="Logo Desktop"></a>
+            <a class = "tablet-logo display-none" href="/index.html"><img height = "60" src="/src/logo/logo.tablet_white.png" alt="Logo Tablet"></a>
 
-            <a class="mobile-logo display-none" href="/index.html"><img height="60" src="/src/logo/logo.desktop_white.png"
-                    alt="Logo Desktop"></a>
+            <a class = "mobile-logo display-none" href="/index.html"><img height = "60" src="/src/logo/logo.mobile_white.png" alt="Logo Mobile"></a>
         </div>
 
         <div class="menu">
-            <ul class="reset-list list-item">
+            <ul class = "reset-list list-item">
                 <li class="active-list"><a href="/index.html">Home</a></li>
                 <li><a href="/blog_technews.html">Blog</a></li>
                 <li><a href="/products.html">Products</a></li>
@@ -43,21 +48,17 @@
             </ul>
         </div>
 
-        <div class="right-menu">
+        <div class = "right-menu">
             <div class="account">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 29">
-                    <path
-                        d="M16 5C12.144531 5 9 8.144531 9 12C9 14.410156 10.230469 16.550781 12.09375 17.8125C8.527344 19.34375 6 22.882813 6 27L8 27C8 24.46875 9.171875 22.214844 11 20.75L15.3125 24.71875L16 25.375L16.6875 24.71875L21 20.75C22.828125 22.214844 24 24.46875 24 27L26 27C26 22.882813 23.472656 19.34375 19.90625 17.8125C21.769531 16.550781 23 14.410156 23 12C23 8.144531 19.855469 5 16 5 Z M 16 7C18.773438 7 21 9.226563 21 12C21 14.773438 18.773438 17 16 17C13.226563 17 11 14.773438 11 12C11 9.226563 13.226563 7 16 7 Z M 16 19C17.144531 19 18.238281 19.226563 19.21875 19.65625L16 22.65625L12.78125 19.65625C13.761719 19.226563 14.855469 19 16 19Z"
-                        fill="#FAFAFA" />
-                </svg>
+                    <path d="M16 5C12.144531 5 9 8.144531 9 12C9 14.410156 10.230469 16.550781 12.09375 17.8125C8.527344 19.34375 6 22.882813 6 27L8 27C8 24.46875 9.171875 22.214844 11 20.75L15.3125 24.71875L16 25.375L16.6875 24.71875L21 20.75C22.828125 22.214844 24 24.46875 24 27L26 27C26 22.882813 23.472656 19.34375 19.90625 17.8125C21.769531 16.550781 23 14.410156 23 12C23 8.144531 19.855469 5 16 5 Z M 16 7C18.773438 7 21 9.226563 21 12C21 14.773438 18.773438 17 16 17C13.226563 17 11 14.773438 11 12C11 9.226563 13.226563 7 16 7 Z M 16 19C17.144531 19 18.238281 19.226563 19.21875 19.65625L16 22.65625L12.78125 19.65625C13.761719 19.226563 14.855469 19 16 19Z" />
+                  </svg>
             </div>
 
             <div class="search">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
-                    <path
-                        d="M10 0.1875C4.578125 0.1875 0.1875 4.578125 0.1875 10C0.1875 15.421875 4.578125 19.8125 10 19.8125C12.289063 19.8125 14.394531 19.003906 16.0625 17.6875L16.9375 18.5625C16.570313 19.253906 16.699219 20.136719 17.28125 20.71875L21.875 25.34375C22.589844 26.058594 23.753906 26.058594 24.46875 25.34375L25.34375 24.46875C26.058594 23.753906 26.058594 22.589844 25.34375 21.875L20.71875 17.28125C20.132813 16.695313 19.253906 16.59375 18.5625 16.96875L17.6875 16.09375C19.011719 14.421875 19.8125 12.300781 19.8125 10C19.8125 4.578125 15.421875 0.1875 10 0.1875 Z M 10 2C14.417969 2 18 5.582031 18 10C18 14.417969 14.417969 18 10 18C5.582031 18 2 14.417969 2 10C2 5.582031 5.582031 2 10 2 Z M 4.9375 7.46875C4.421875 8.304688 4.125 9.289063 4.125 10.34375C4.125 13.371094 6.566406 15.8125 9.59375 15.8125C10.761719 15.8125 11.859375 15.433594 12.75 14.8125C12.511719 14.839844 12.246094 14.84375 12 14.84375C8.085938 14.84375 4.9375 11.695313 4.9375 7.78125C4.9375 7.675781 4.933594 7.574219 4.9375 7.46875Z"
-                        fill="#FAFAFA" />
-                </svg>
+                    <path d="M10 0.1875C4.578125 0.1875 0.1875 4.578125 0.1875 10C0.1875 15.421875 4.578125 19.8125 10 19.8125C12.289063 19.8125 14.394531 19.003906 16.0625 17.6875L16.9375 18.5625C16.570313 19.253906 16.699219 20.136719 17.28125 20.71875L21.875 25.34375C22.589844 26.058594 23.753906 26.058594 24.46875 25.34375L25.34375 24.46875C26.058594 23.753906 26.058594 22.589844 25.34375 21.875L20.71875 17.28125C20.132813 16.695313 19.253906 16.59375 18.5625 16.96875L17.6875 16.09375C19.011719 14.421875 19.8125 12.300781 19.8125 10C19.8125 4.578125 15.421875 0.1875 10 0.1875 Z M 10 2C14.417969 2 18 5.582031 18 10C18 14.417969 14.417969 18 10 18C5.582031 18 2 14.417969 2 10C2 5.582031 5.582031 2 10 2 Z M 4.9375 7.46875C4.421875 8.304688 4.125 9.289063 4.125 10.34375C4.125 13.371094 6.566406 15.8125 9.59375 15.8125C10.761719 15.8125 11.859375 15.433594 12.75 14.8125C12.511719 14.839844 12.246094 14.84375 12 14.84375C8.085938 14.84375 4.9375 11.695313 4.9375 7.78125C4.9375 7.675781 4.933594 7.574219 4.9375 7.46875Z"/>
+                  </svg>
             </div>
         </div>
     </header>
@@ -234,6 +235,12 @@
             <p>...</p>
             <button>99</button>
             <a href="">Next &#8811;</a>
+        </div>
+
+        <div class="display-none news-pagination-mobile">
+            <button> &#8810;</button>
+            <p>1 / 100</p>
+            <button class="active-button"> &#8811; </button>
         </div>
 
         <script>
@@ -463,12 +470,15 @@
     </script>
 
     <!-- ========== Footer Section ========== -->
+    <!-- ========== Footer Section ========== -->
     <footer class="footer max-container padding-all">
         <div class="footer-info">
             <div class="company-description">
-                <a href="/index.html">
-                    <img class="company-logo" src="./src/logo/logo.desktop_white.png" alt="">
-                </a>
+                <div>
+                    <a href="/index.html">
+                        <img class="company-logo" src="./src/logo/logo.desktop_white.png" alt="">
+                    </a>
+                </div>
 
                 <div class="company-social">
                     <a href="/404.html">
@@ -538,7 +548,7 @@
 
         <div class="footer-copyright">
             <p>© 2022 - Ant Plugins, All Rights Reserved.</p>
-            <button class="back-to-top">
+            <button class="back-to-top" id="top-Btn" onclick="topFunction()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="30" height="30">
                     <path
                         d="M13 6.171875L3.585938 15.585938L6.414063 18.414063L13 11.828125L19.585938 18.414063L22.414063 15.585938Z"
@@ -548,6 +558,6 @@
             </button>
         </div>
     </footer>
+    <script src="/src/scripts.js"></script>
 </body>
-
 </html>
