@@ -302,7 +302,7 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: var(--xlDis);
+    /* padding-left: var(--xlDis); */
 }
 
 .top-banner .banner2{
@@ -310,7 +310,7 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: var(--xlDis);
+    /* padding-left: var(--xlDis); */
 }
 
 .top-banner .banner3{
@@ -318,7 +318,7 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: var(--xlDis);
+    /* padding-left: var(--xlDis); */
 }
 
 .top-banner .banner4{
@@ -326,7 +326,7 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: var(--xlDis);
+    /* padding-left: var(--xlDis); */
 }
 
 .top-banner .banner5{
@@ -334,14 +334,14 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: var(--xlDis);
+    /* padding-left: var(--xlDis); */
 }
 
 .top-banner .swiper-slide .banner-content{
     display: flex;
     flex-direction: column;
     gap: var(--smDis);
-    margin: 0 --mdDis;
+    margin: 0 var(--xlDis);
     /* min-width: 600px; */
     width: 100%;
 }
@@ -416,6 +416,7 @@ p {
         display: flex;
         text-align: center;
         justify-content: center;
+        margin: 0 var(--mdDis);
     }
 
     .top-banner .swiper-slide .banner-content .banner-button{
