@@ -75,16 +75,13 @@ iframe {
     max-width: 100%;
 }
 
-del, .discount{
-    font-size: var(--fontSize5);
-}
 
 body {
     margin: 0px;
     padding: 0px;
     background-color: var(--whitecolor);
     position: relative;
-    
+    min-width: 360px;    
 }
 
 body,
@@ -118,43 +115,6 @@ p {
 
 .active {
     color: var(--mainColor1);
-}
-
-/*Filter styles*/
-.saturate {
-    filter: saturate(3);
-}
-
-.grayscale {
-    filter: grayscale(100%);
-}
-
-.contrast {
-    filter: contrast(160%);
-}
-
-.brightness {
-    filter: brightness(0.25);
-}
-
-.blur {
-    filter: blur(3px);
-}
-
-.invert {
-    filter: invert(100%);
-}
-
-.sepia {
-    filter: sepia(100%);
-}
-
-.huerotate {
-    filter: hue-rotate(180deg);
-}
-
-.rss.opacity {
-    filter: opacity(50%);
 }
 
 /* ========== Products Page - Heading Section ========== */
@@ -237,6 +197,80 @@ p {
 
 .search > svg{
     height: 30px;
+}
+
+.menu-button {
+    width: 34px;
+    height: 32px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid var(--darkcolor2);
+    border-radius: 5px;
+}
+
+.menu-button svg{
+    width: 30px;
+    height: 29px;
+    /* fill: var(--mainColor1); */
+}
+
+@media (min-width: 960px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: none;
+    }
+
+    .logo .mobile-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
 }
 
 /* ========== Products Page - Breadcrumb Section ========== */
@@ -556,9 +590,15 @@ p {
 /* ========== Products Page - Product Section ========== */
 .products-page{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 290px auto;
     width: 100%;
+    padding: 0 var(--smDis) var(--lgDis) var(--smDis);
     gap: var(--mdDis);
+}
+
+.filter-column{
+    min-width: 290px;
+    display: block;
 }
 
 .filter-column .filter-header{
@@ -567,6 +607,7 @@ p {
     font-size: var(--fontSize2);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .filter-column .filter-header .filter-header-text{
@@ -716,6 +757,8 @@ p {
     box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
 
+/*  */
+
 .filter-column .filter-option .type-filter .filter-input .input-text{
     display: flex;
     height: 40px;
@@ -741,12 +784,22 @@ p {
     right: 0.5px;
 }
 
+/*  */
+
+.products-column{
+    max-width: 790px;
+    display: block;
+    width: 100%;
+    overflow: hidden !important;
+}
+
 .products-column .products-header{
     height: 100px;
     /* background-color: #0D0D0D; */
     font-size: var(--fontSize2);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .products-column .products-header .products-header-text{
@@ -770,14 +823,23 @@ p {
     left: 0px;
 }
 
-.products-column .products-containers{
-    height: 790px;
-    max-width: 790px;
+.products-column .products-header .filter-button{
+    padding: var(--smDis) var(--lgDis);
+    background-color: var(--mainColor1);
+    font-weight: 600;
+    color: var(--whitecolor);
+    border-radius: 5px;
+    border: none;
 }
 
-.products-column .products-containers .swiper-wrapper{
-    height: 100%;
-    width: 100%;
+/*  */
+
+.products-column .products-containers{
+    height: 790px;
+    /* max-width: 790px; */
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
 }
 
 .products-column .products-containers .swiper-wrapper .swiper-slide{
@@ -786,7 +848,7 @@ p {
     position: relative;
     border-radius: 15px;
     border: var(--mediancolor) 2px solid;
-    display: flex;
+    display: block;
 }
 
 .products-column .products-containers .swiper-wrapper .swiper-slide .sale-btn{
@@ -858,6 +920,21 @@ p {
     z-index: -1;
 }
 
+@media (max-width: 810px){
+    .products-column .products-header .filter-button{
+        display: block;
+    }
+
+    .filter-column{
+        display: none;
+    }
+
+    .products-page{
+        display: block;
+    }
+}
+
+
 /* ========== Products Page - Footer Section ========== */
 .footer{
     background-color: #1289B3;
@@ -866,7 +943,7 @@ p {
 
 .footer .footer-info{
     display: flex;
-    justify-content: flex-start; 
+    /* justify-content: flex-start;  */
     align-items: center;
 }
 
@@ -932,4 +1009,58 @@ p {
 
 .footer-copyright .back-to-top svg{
     padding-right: var(--smDis);
+}
+
+@media (max-width: 880px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+    }
+}
+
+@media (max-width: 570px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+        display: block;
+        gap: var(--mdDis);
+    }
 }

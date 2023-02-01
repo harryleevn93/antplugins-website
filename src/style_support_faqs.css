@@ -81,7 +81,7 @@ body {
     padding: 0px;
     background-color: var(--whitecolor);
     position: relative;
-    
+    min-width: 360px;    
 }
 
 body,
@@ -115,43 +115,6 @@ p {
 
 .active {
     color: var(--mainColor1);
-}
-
-/*Filter styles*/
-.saturate {
-    filter: saturate(3);
-}
-
-.grayscale {
-    filter: grayscale(100%);
-}
-
-.contrast {
-    filter: contrast(160%);
-}
-
-.brightness {
-    filter: brightness(0.25);
-}
-
-.blur {
-    filter: blur(3px);
-}
-
-.invert {
-    filter: invert(100%);
-}
-
-.sepia {
-    filter: sepia(100%);
-}
-
-.huerotate {
-    filter: hue-rotate(180deg);
-}
-
-.rss.opacity {
-    filter: opacity(50%);
 }
 
 /* ========== Support FAQs - Heading Section ========== */
@@ -236,6 +199,80 @@ p {
     height: 30px;
 }
 
+.menu-button {
+    width: 34px;
+    height: 32px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid var(--darkcolor2);
+    border-radius: 5px;
+}
+
+.menu-button svg{
+    width: 30px;
+    height: 29px;
+    /* fill: var(--mainColor1); */
+}
+
+@media (min-width: 960px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: none;
+    }
+
+    .logo .mobile-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
 /* ========== Support FAQs - Breadcrumb Section ========== */
 .breadcrumb{
     height: 50px;
@@ -294,6 +331,7 @@ p {
     height: auto;
     width: 100%;
     margin: var(--mdDis) 0;
+    padding: 0 var(--mdDis);
     padding-bottom: var(--mdDis);
 }
 
@@ -315,7 +353,9 @@ p {
     width: 100%;
     margin: auto;
     max-width: 800px;
+    padding: 0 var(--smDis);
     padding-top: var(--mdDis);
+    font-weight: 200;
 }
 
 .faqs .faqs-pagination{
@@ -352,7 +392,42 @@ p {
     color: var(--mediancolor);
 }
 
+/*  */
 
+.faqs .faqs-pagination-mobile{
+    /* display: flex; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: var(--smDis);
+    color: var(--mainColor1);
+}
+
+.faqs .faqs-pagination-mobile button{
+    height: 44px;
+    width: 44px;
+    background-color: var(--whitecolor);
+    color: var(--mainColor1);
+    font-size: var(--fontSize3);
+    font-weight: 600;
+    border-radius: 5px;
+    border: solid 3px var(--mainColor1);
+}
+
+.faqs .faqs-pagination-mobile .active-button{
+    background-color: var(--mainColor1);
+    color: var(--whitecolor);
+}
+
+@media (max-width: 560px){
+    .faqs .faqs-pagination{
+        display: none;
+    }
+
+    .faqs .faqs-pagination-mobile{
+        display: flex;
+    }
+}
 
 /* ========== Support FAQs - Footer Section ========== */
 .footer{
@@ -362,7 +437,7 @@ p {
 
 .footer .footer-info{
     display: flex;
-    justify-content: flex-start; 
+    /* justify-content: flex-start;  */
     align-items: center;
 }
 
@@ -428,4 +503,58 @@ p {
 
 .footer-copyright .back-to-top svg{
     padding-right: var(--smDis);
+}
+
+@media (max-width: 880px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+    }
+}
+
+@media (max-width: 570px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+        display: block;
+        gap: var(--mdDis);
+    }
 }

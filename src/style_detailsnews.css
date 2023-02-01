@@ -81,7 +81,7 @@ body {
     padding: 0px;
     background-color: var(--whitecolor);
     position: relative;
-    
+    min-width: 360px;    
 }
 
 body,
@@ -117,44 +117,7 @@ p {
     color: var(--mainColor1);
 }
 
-/*Filter styles*/
-.saturate {
-    filter: saturate(3);
-}
-
-.grayscale {
-    filter: grayscale(100%);
-}
-
-.contrast {
-    filter: contrast(160%);
-}
-
-.brightness {
-    filter: brightness(0.25);
-}
-
-.blur {
-    filter: blur(3px);
-}
-
-.invert {
-    filter: invert(100%);
-}
-
-.sepia {
-    filter: sepia(100%);
-}
-
-.huerotate {
-    filter: hue-rotate(180deg);
-}
-
-.rss.opacity {
-    filter: opacity(50%);
-}
-
-/* ========== Technical News - Heading Section ========== */
+/* ========== Details Technical News - Heading Section ========== */
 .top-header{
     height: 100px;
     background-color: var(--whitecolor2);
@@ -236,11 +199,91 @@ p {
     height: 30px;
 }
 
+.menu-button {
+    width: 34px;
+    height: 32px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid var(--darkcolor2);
+    border-radius: 5px;
+}
+
+.menu-button svg{
+    width: 30px;
+    height: 29px;
+    /* fill: var(--mainColor1); */
+}
+
+@media (min-width: 960px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: none;
+    }
+
+    .logo .mobile-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
 /* ========== Technical News - Breadcrumb Section ========== */
 .breadcrumb{
     height: 50px;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
 }
 
 .breadcrumb .hyperlink{
@@ -249,7 +292,7 @@ p {
 }
 
 /* ========== Technical News - News Section ========== */
-.about-us{
+.details-news{
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: var(--mdDis);
@@ -258,31 +301,31 @@ p {
     padding: 0 var(--mdDis);
 }
 
-.about-us .news-col{
+.details-news .news-col{
     display: block;
     justify-content: center;
     align-items: center;
     max-width: 760px;
 }
 
-.about-us .news-col p{
+.details-news .news-col p{
     text-align: justify;
     text-justify: inter-word;
 }
 
-.about-us .news-col .title-container{
+.details-news .news-col .title-container{
     display: block;
     align-items: center;
     justify-content: center;
 }
 
-.about-us .news-col .title-container .title-news{
+.details-news .news-col .title-container .title-news{
     font-family: var(--font2);
     font-size: var(--fontSize2);
     padding-bottom: var(--smDis);
 }
 
-.about-us .news-col .title-container .author .hyperlink{
+.details-news .news-col .title-container .author .hyperlink{
     font-family: var(--font1);
     font-size: var(--fontSize4);
     padding-bottom: var(--smDis);
@@ -290,7 +333,7 @@ p {
     font-weight: 400;
 }
 
-.about-us .news-col .news-img{
+.details-news .news-col .news-img{
     display: flex;
     margin: auto;
     align-items: center;
@@ -298,7 +341,7 @@ p {
     width: 100%;
 }
 
-.about-us .news-col .see-also{
+.details-news .news-col .see-also{
     display: block;
     justify-content: center;
     align-items: center;
@@ -307,28 +350,29 @@ p {
     font-size: var(--fontSize3);
 }
 
-.about-us .news-col .see-also ul li a{
+.details-news .news-col .see-also ul li a{
     text-decoration: underline;
     color: var(--mainColor1);
     font-weight: 100;
     font-size: var(--fontSize4);
 }
 
-.about-us .ad-col{
+.details-news .ad-col{
     background-color: var(--subwhitecolor);
+    min-width: 360px;
 }
 
-.about-us .ad-col img{
+.details-news .ad-col img{
     width: 100%;
     padding: var(--mdDis);
 }
 
 @media screen and (max-width: 880px) {
-    .about-us .ad-col{
+    .details-news .ad-col{
         display: none;
     }
 
-    .about-us{
+    .details-news{
         display: block;
     }
 }
@@ -341,7 +385,7 @@ p {
 
 .footer .footer-info{
     display: flex;
-    justify-content: flex-start; 
+    /* justify-content: flex-start;  */
     align-items: center;
 }
 
@@ -407,4 +451,58 @@ p {
 
 .footer-copyright .back-to-top svg{
     padding-right: var(--smDis);
+}
+
+@media (max-width: 880px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+    }
+}
+
+@media (max-width: 570px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+        display: block;
+        gap: var(--mdDis);
+    }
 }

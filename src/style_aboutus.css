@@ -81,7 +81,7 @@ body {
     padding: 0px;
     background-color: var(--whitecolor);
     position: relative;
-    
+    min-width: 360px;    
 }
 
 body,
@@ -117,44 +117,7 @@ p {
     color: var(--mainColor1);
 }
 
-/*Filter styles*/
-.saturate {
-    filter: saturate(3);
-}
-
-.grayscale {
-    filter: grayscale(100%);
-}
-
-.contrast {
-    filter: contrast(160%);
-}
-
-.brightness {
-    filter: brightness(0.25);
-}
-
-.blur {
-    filter: blur(3px);
-}
-
-.invert {
-    filter: invert(100%);
-}
-
-.sepia {
-    filter: sepia(100%);
-}
-
-.huerotate {
-    filter: hue-rotate(180deg);
-}
-
-.rss.opacity {
-    filter: opacity(50%);
-}
-
-/* ========== About Us - Heading Section ========== */
+/* ========== About Us Page - Heading Section ========== */
 .top-header{
     height: 100px;
     background-color: var(--whitecolor2);
@@ -234,6 +197,80 @@ p {
 
 .search > svg{
     height: 30px;
+}
+
+.menu-button {
+    width: 34px;
+    height: 32px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid var(--darkcolor2);
+    border-radius: 5px;
+}
+
+.menu-button svg{
+    width: 30px;
+    height: 29px;
+    /* fill: var(--mainColor1); */
+}
+
+@media (min-width: 960px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: none;
+    }
+
+    .logo .mobile-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
 }
 
 /* ========== About Us - Breadcrumb Section ========== */
@@ -332,7 +369,7 @@ p {
     }
 }
 
-/* ========== About Us - Footer Section ========== */
+/* ========== About Us Page - Footer Section ========== */
 .footer{
     background-color: #1289B3;
     display: block;
@@ -340,7 +377,7 @@ p {
 
 .footer .footer-info{
     display: flex;
-    justify-content: flex-start; 
+    /* justify-content: flex-start;  */
     align-items: center;
 }
 
@@ -406,4 +443,58 @@ p {
 
 .footer-copyright .back-to-top svg{
     padding-right: var(--smDis);
+}
+
+@media (max-width: 880px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+    }
+}
+
+@media (max-width: 570px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+        display: block;
+        gap: var(--mdDis);
+    }
 }

@@ -81,7 +81,7 @@ body {
     padding: 0px;
     background-color: var(--whitecolor);
     position: relative;
-    
+    min-width: 360px;    
 }
 
 body,
@@ -117,44 +117,7 @@ p {
     color: var(--mainColor1);
 }
 
-/*Filter styles*/
-.saturate {
-    filter: saturate(3);
-}
-
-.grayscale {
-    filter: grayscale(100%);
-}
-
-.contrast {
-    filter: contrast(160%);
-}
-
-.brightness {
-    filter: brightness(0.25);
-}
-
-.blur {
-    filter: blur(3px);
-}
-
-.invert {
-    filter: invert(100%);
-}
-
-.sepia {
-    filter: sepia(100%);
-}
-
-.huerotate {
-    filter: hue-rotate(180deg);
-}
-
-.rss.opacity {
-    filter: opacity(50%);
-}
-
-/* ========== Product Details - Heading Section ========== */
+/* ========== Contact Us - Heading Section ========== */
 .top-header{
     height: 100px;
     background-color: var(--whitecolor2);
@@ -236,7 +199,81 @@ p {
     height: 30px;
 }
 
-/* ========== Product Details - Breadcrumb Section ========== */
+.menu-button {
+    width: 34px;
+    height: 32px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid var(--darkcolor2);
+    border-radius: 5px;
+}
+
+.menu-button svg{
+    width: 30px;
+    height: 29px;
+    /* fill: var(--mainColor1); */
+}
+
+@media (min-width: 960px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    .logo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 60px;
+    }
+
+    .logo .desktop-logo
+    {
+        display: none;
+    }
+
+    .logo .tablet-logo{
+        display: none;
+    }
+
+    .logo .mobile-logo{
+        display: block;
+        /* height: 40px; */
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
+/* ========== Contact Us - Breadcrumb Section ========== */
 .breadcrumb{
     display: flex;
     align-items: center;
@@ -248,7 +285,7 @@ p {
     color: var(--mainColor1);
 }
 
-/* ========== Product Details - FAQs Section ========== */
+/* ========== Contact Us - FAQs Section ========== */
 .contact-us{
     display: block;
     justify-content: center;
@@ -293,6 +330,7 @@ p {
     display: grid;
     grid-template-columns: 2fr 1fr;
     width: 100%;
+
 }
 
 .contact-forms .request{
@@ -300,6 +338,8 @@ p {
     display: block;
     /* max-width: 800px; */
     padding-left: var(--mdDis);
+    padding-right: var(--mdDis);
+    padding-bottom: var(--mdDis);
     font-weight: 200;
 }
 
@@ -309,7 +349,6 @@ p {
     grid-template-rows: 1fr 1fr;
     gap: var(--smDis);
     margin-bottom: var(--smDis);
-    margin-right: var(--mdDis);
 }
 
 .contact-forms .request .form-request .form-candidate label{
@@ -334,7 +373,6 @@ p {
 }
 
 .contact-forms .request .form-message{
-    margin-right: var(--mdDis);
     margin-bottom: var(--mdDis);
 }
 
@@ -365,8 +403,7 @@ p {
 
 .contact-forms .request .submit-button{
     height: 40px;
-    margin: var(--smDis) 0;
-    margin-right: var(--mdDis);
+    margin: var(--smDis) 0 0 0;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -411,6 +448,13 @@ p {
     display: flex;    
 }
 
+@media (max-width: 880px) {
+    .contact-forms{
+        display: block;
+        width: 100%;
+    }
+}
+
 /* ========== Product Details - Footer Section ========== */
 .footer{
     background-color: #1289B3;
@@ -419,7 +463,7 @@ p {
 
 .footer .footer-info{
     display: flex;
-    justify-content: flex-start; 
+    /* justify-content: flex-start;  */
     align-items: center;
 }
 
@@ -485,4 +529,58 @@ p {
 
 .footer-copyright .back-to-top svg{
     padding-right: var(--smDis);
+}
+
+@media (max-width: 880px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+    }
+}
+
+@media (max-width: 570px) { 
+    .footer .footer-info{
+        display: block;
+        /* justify-content: flex-start;  */
+        align-items: center;
+    }
+
+    .footer .footer-info .company-description{
+        display: block;
+        width: 100%;
+        margin: var(--smDis) auto 0 auto;
+    }
+
+    .footer .footer-info .company-description div{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-info .footer-index{
+        margin-left: 0px;
+        padding-top: var(--mdDis);
+        display: block;
+        gap: var(--mdDis);
+    }
 }
