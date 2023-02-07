@@ -16,47 +16,357 @@
 </head>
 <body>
     <!-- ========== Header Section ========== -->
-    <header class="top-header padding-all max-container">
-        <button class="menu-button">
-            <svg>
-                <rect class="top" width="26" height="3" x="2" y="5"></rect>
-                <rect class="mid" width="26" height="3" x="2" y="13"></rect>
-                <rect class="bot" width="26" height="3" x="2" y="21"></rect>
-            </svg>
-        </button>
-        
-        <div class="logo">
-            <a class = "desktop-logo" href="/index.html"><img height = "60" src="/src/logo/logo.desktop.png" alt="Logo Desktop"></a>
+    <header class="top-header max-container">
+        <div class="top-container">
+            <button class="menu-button" onclick="toggleMenu()">
+                <svg>
+                    <rect class="top" width="26" height="3" x="2" y="5"></rect>
+                    <rect class="mid" width="26" height="3" x="2" y="13"></rect>
+                    <rect  class="bot" width="26" height="3" x="2" y="21"></rect>
+                </svg>
+            </button>
+            
+            <div class="logo">
+                <a class = "desktop-logo" href="/index.html"><img height = "60" src="/src/logo/logo.desktop.png" alt="Logo Desktop"></a>
 
-            <a class = "tablet-logo display-none" href="/index.html"><img height = "60" src="/src/logo/logo.tablet.png" alt="Logo Tablet"></a>
+                <a class = "tablet-logo display-none" href="/index.html"><img height = "60" src="/src/logo/logo.tablet.png" alt="Logo Tablet"></a>
 
-            <a class = "mobile-logo display-none" href="/index.html"><img height = "60" src="/src/logo/logo.mobile.png" alt="Logo Mobile"></a>
-        </div>
-
-        <div class="menu">
-            <ul class = "reset-list list-item">
-                <li><a href="/index.html">Home</a></li>
-                <li class = "active-list"><a href="/blog_technews.html">Blog</a></li>
-                <li><a href="/products.html">Products</a></li>
-                <li><a href="/support_faqs.html">Support</a></li>
-                <li><a href="/payment_carts.html">Payment</a></li>
-            </ul>
-        </div>
-
-        <div class = "right-menu">
-            <div class="account">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 29">
-                    <path d="M16 5C12.144531 5 9 8.144531 9 12C9 14.410156 10.230469 16.550781 12.09375 17.8125C8.527344 19.34375 6 22.882813 6 27L8 27C8 24.46875 9.171875 22.214844 11 20.75L15.3125 24.71875L16 25.375L16.6875 24.71875L21 20.75C22.828125 22.214844 24 24.46875 24 27L26 27C26 22.882813 23.472656 19.34375 19.90625 17.8125C21.769531 16.550781 23 14.410156 23 12C23 8.144531 19.855469 5 16 5 Z M 16 7C18.773438 7 21 9.226563 21 12C21 14.773438 18.773438 17 16 17C13.226563 17 11 14.773438 11 12C11 9.226563 13.226563 7 16 7 Z M 16 19C17.144531 19 18.238281 19.226563 19.21875 19.65625L16 22.65625L12.78125 19.65625C13.761719 19.226563 14.855469 19 16 19Z" fill="#404040" />
-                  </svg>
+                <a class = "mobile-logo display-none" href="/index.html"><img height = "60" src="/src/logo/logo.mobile.png" alt="Logo Mobile"></a>
             </div>
 
-            <div class="search">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
-                    <path d="M10 0.1875C4.578125 0.1875 0.1875 4.578125 0.1875 10C0.1875 15.421875 4.578125 19.8125 10 19.8125C12.289063 19.8125 14.394531 19.003906 16.0625 17.6875L16.9375 18.5625C16.570313 19.253906 16.699219 20.136719 17.28125 20.71875L21.875 25.34375C22.589844 26.058594 23.753906 26.058594 24.46875 25.34375L25.34375 24.46875C26.058594 23.753906 26.058594 22.589844 25.34375 21.875L20.71875 17.28125C20.132813 16.695313 19.253906 16.59375 18.5625 16.96875L17.6875 16.09375C19.011719 14.421875 19.8125 12.300781 19.8125 10C19.8125 4.578125 15.421875 0.1875 10 0.1875 Z M 10 2C14.417969 2 18 5.582031 18 10C18 14.417969 14.417969 18 10 18C5.582031 18 2 14.417969 2 10C2 5.582031 5.582031 2 10 2 Z M 4.9375 7.46875C4.421875 8.304688 4.125 9.289063 4.125 10.34375C4.125 13.371094 6.566406 15.8125 9.59375 15.8125C10.761719 15.8125 11.859375 15.433594 12.75 14.8125C12.511719 14.839844 12.246094 14.84375 12 14.84375C8.085938 14.84375 4.9375 11.695313 4.9375 7.78125C4.9375 7.675781 4.933594 7.574219 4.9375 7.46875Z" fill="#404040" />
-                  </svg>
+            <div class="search-bar">
+                <div class="search-bar-tab">
+                    <input type="text" class = "search-bar-text" placeholder="Well, what do you search for...?">
+                    <svg class = "search-bar-close" onclick="toggleSearch()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40">
+                        <path d="M7.21875 5.78125L5.78125 7.21875L14.5625 16L5.78125 24.78125L7.21875 26.21875L16 17.4375L24.78125 26.21875L26.21875 24.78125L17.4375 16L26.21875 7.21875L24.78125 5.78125L16 14.5625Z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="menu">
+                <ul class = "reset-list list-item">
+                    <li class="">
+                        <a href="./index.html">Home</a>
+                    </li>
+
+                    <li class = "blog-icon active-list">
+                        <p class = "blog-title-text" onclick="toogleBlogPanel()"> Blog </p>
+                        <div class="blog-panel">
+                            <div class = blog-panel-space>
+                                <div class="blog-row">
+                                    <a href="./about_us.html">About Us</a>
+                                    <div onclick="toogleBlogAboutUsPanel()" class="aboutus-expand-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                            <path d="M1 4L12 22.300781L23 4L1 4 z" fill="#17B0E6" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="aboutus-expand-menu">
+                                    <div class="blog-contact-us">
+                                        <a href="./contact_us.html">Contact Us</a>
+                                    </div>
+                                    <div class="blog-career">
+                                        <a href="./404.html">Careers</a>
+                                    </div>
+                                </div>
+
+                                <div class="blog-row">
+                                    <a href="">News</a>
+                                    <div onclick="toogleBlogNewsPanel()" class="news-expand-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                            <path d="M1 4L12 22.300781L23 4L1 4 z" fill="#17B0E6" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="news-expand-menu">
+                                    <div class="blog-technical-news">
+                                        <a href="">Technology News</a>
+                                    </div>
+                                    <div class="blog-reviews">
+                                        <a href="">Reviews</a>
+                                    </div>
+                                </div>
+
+                                <div class="blog-row">
+                                    <a href="./404.html">Printed Materials</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class = "products-icon">
+                        <p class = "products-title-text" onclick="toogleProductsPanel()">Products</p>
+                        <div class="products-panel">
+                            <div class = products-panel-space>
+                                <div class="products-row">
+                                    <a href="./products.html">Keyboard + Mouse</a>
+                                </div>
+                                <div class="products-row">
+                                    <a href="./products.html">Headset + Speakers</a>
+                                </div>
+                                <div class="products-row">
+                                    <a href="./products.html">Cable + Chargers</a>
+                                </div>
+                                <div class="products-row">
+                                    <a href="./products.html">Webcam</a>
+                                </div>
+                                <div class="products-row">
+                                    <a href="./products.html">USB</a>
+                                </div>
+                                <div class="products-row">
+                                    <a href="./products.html">Joysticks</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class = "support-icon">
+                        <p class = "support-title-text" onclick="toogleSupportPanel()">Support</p>
+                        <div class="support-panel">
+                            <div class = support-panel-space>
+                                <div class="support-row">
+                                    <a href="./404.html">Legal Documents</a>
+                                    <div onclick="tooglelegalNewsPanel()" class="legal-expand-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                            <path d="M1 4L12 22.300781L23 4L1 4 z" fill="#17B0E6" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="legal-expand-menu">
+                                    <div class="support-installs">
+                                        <a href="/404.html">Installment</a>
+                                    </div>
+                                    <div class="support-privacy">
+                                        <a href="/404.html">Privacy</a>
+                                    </div>
+                                    <div class="support-logistics">
+                                        <a href="/404.html">Logistics</a>
+                                    </div>
+                                    <div class="support-warranty">
+                                        <a href="/404.html">Warranty</a>
+                                    </div>
+                                    <div class="support-returns">
+                                        <a href="/404.html">Returns</a>
+                                    </div>
+                                </div>
+
+                                <div class="support-row" style="border: none;">
+                                    <a href="./404.html">Customer Cares</a>
+                                    <div onclick="toogleCCPanel()" class="cc-expand-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                            <path d="M1 4L12 22.300781L23 4L1 4 z" fill="#17B0E6" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="cc-expand-menu">
+                                    <div class="support-faqs">
+                                        <a href="./support_faqs.html">FAQs</a>
+                                    </div>
+                                    <div class="support-report">
+                                        <a href="./contact_us.html">Report Problems</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class = "payment-icon">
+                        <p class = "payment-title-text" onclick="tooglePaymentPanel()">Payment</p>
+                        <div class="payment-panel">
+                            <div class = payment-panel-space>
+                                <div class="payment-row">
+                                    <a href="./404.html">Payment Guides</a>
+                                </div>
+                                <div class="payment-row">
+                                    <a href="./payment_carts.html">Cart 
+                                        <span style="color: var(--redsalecolor) ;">(1)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class = "right-menu">
+                <div class="account" onclick="toggleAccountPanel()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 29">
+                        <path d="M16 5C12.144531 5 9 8.144531 9 12C9 14.410156 10.230469 16.550781 12.09375 17.8125C8.527344 19.34375 6 22.882813 6 27L8 27C8 24.46875 9.171875 22.214844 11 20.75L15.3125 24.71875L16 25.375L16.6875 24.71875L21 20.75C22.828125 22.214844 24 24.46875 24 27L26 27C26 22.882813 23.472656 19.34375 19.90625 17.8125C21.769531 16.550781 23 14.410156 23 12C23 8.144531 19.855469 5 16 5 Z M 16 7C18.773438 7 21 9.226563 21 12C21 14.773438 18.773438 17 16 17C13.226563 17 11 14.773438 11 12C11 9.226563 13.226563 7 16 7 Z M 16 19C17.144531 19 18.238281 19.226563 19.21875 19.65625L16 22.65625L12.78125 19.65625C13.761719 19.226563 14.855469 19 16 19Z" />
+                    </svg>
+                </div>
+
+                <div class="search" onclick="toggleSearch()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                        <path d="M10 0.1875C4.578125 0.1875 0.1875 4.578125 0.1875 10C0.1875 15.421875 4.578125 19.8125 10 19.8125C12.289063 19.8125 14.394531 19.003906 16.0625 17.6875L16.9375 18.5625C16.570313 19.253906 16.699219 20.136719 17.28125 20.71875L21.875 25.34375C22.589844 26.058594 23.753906 26.058594 24.46875 25.34375L25.34375 24.46875C26.058594 23.753906 26.058594 22.589844 25.34375 21.875L20.71875 17.28125C20.132813 16.695313 19.253906 16.59375 18.5625 16.96875L17.6875 16.09375C19.011719 14.421875 19.8125 12.300781 19.8125 10C19.8125 4.578125 15.421875 0.1875 10 0.1875 Z M 10 2C14.417969 2 18 5.582031 18 10C18 14.417969 14.417969 18 10 18C5.582031 18 2 14.417969 2 10C2 5.582031 5.582031 2 10 2 Z M 4.9375 7.46875C4.421875 8.304688 4.125 9.289063 4.125 10.34375C4.125 13.371094 6.566406 15.8125 9.59375 15.8125C10.761719 15.8125 11.859375 15.433594 12.75 14.8125C12.511719 14.839844 12.246094 14.84375 12 14.84375C8.085938 14.84375 4.9375 11.695313 4.9375 7.78125C4.9375 7.675781 4.933594 7.574219 4.9375 7.46875Z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class = "your-account">
+                <div class="your-account-panel">
+                    <svg onclick="toggleAccountPanel()" class = "close-account-btn"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+                        <path d="M7.21875 5.78125L5.78125 7.21875L14.5625 16L5.78125 24.78125L7.21875 26.21875L16 17.4375L24.78125 26.21875L26.21875 24.78125L17.4375 16L26.21875 7.21875L24.78125 5.78125L16 14.5625Z"/>
+                    </svg>
+
+                    <p class="login-text">Login</p>
+
+                    <div class="account-login-form">
+                        <div class="form-request">
+                            <label for="Name">Your Name:</label><br>
+                            <input type="text" id="fname" name="Name" placeholder="Type your Username..."><br>
+                        </div>
+
+                        <div class="form-request">
+                            <label for="Numbers">Your Password:</label><br>
+                            <input type="password" id="pass" name="Password" placeholder="Type your Password...">
+                        </div>
+
+                        <label class="typeform-control">
+                            <input type="checkbox" name="checkbox" />
+                            Remember me?
+                        </label>
+                    </div>
+
+                    <div class="login-place">
+                        <button class="login-btn">
+                            Login
+                        </button>
+                        <a href="">Forgot your Passwords?</a>
+                    </div>
+
+                </div>
             </div>
         </div>
     </header>
+
+    <!-- ========== Navigation Section ========== -->
+    <nav class = "menu-bar" id="menu-bar-id">
+        <div class = "top-menu-bar">
+            <p>HOMEPAGE MENU</p>
+            <svg class = "close-btn" onclick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+                <path d="M7.21875 5.78125L5.78125 7.21875L14.5625 16L5.78125 24.78125L7.21875 26.21875L16 17.4375L24.78125 26.21875L26.21875 24.78125L17.4375 16L26.21875 7.21875L24.78125 5.78125L16 14.5625Z" fill="#404040" />
+            </svg>
+        </div>
+
+        <div class="menu-bar-title">
+            <div class="menu-bar-items">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="20" height="20">
+                    <path d="M20 2.03125C19.449219 2.03125 19 2.480469 19 3.03125L19 7.8125L13.71875 2.53125C13.328125 2.140625 12.671875 2.140625 12.28125 2.53125L0.5625 14.28125C0.171875 14.671875 0.171875 15.296875 0.5625 15.6875C0.953125 16.078125 1.578125 16.078125 1.96875 15.6875L13 4.65625L24.0625 15.71875C24.257813 15.914063 24.523438 16.03125 24.78125 16.03125C25.039063 16.03125 25.273438 15.914063 25.46875 15.71875C25.859375 15.328125 25.859375 14.703125 25.46875 14.3125L22 10.84375L22 3.03125C22 2.480469 21.550781 2.03125 21 2.03125 Z M 13 6.5L2 17.5L2 23C2 24.65625 3.34375 26 5 26L21 26C22.65625 26 24 24.65625 24 23L24 17.5 Z M 11 16L15 16C15.550781 16 16 16.449219 16 17L16 23C16 23.550781 15.550781 24 15 24L11 24C10.449219 24 10 23.550781 10 23L10 17C10 16.449219 10.449219 16 11 16Z" fill="#17B0E6" />
+                    </svg>
+                <a href="/index.html">Home</a>
+            </div>
+
+            <div class="menu-bar-items">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20">
+                    <path d="M9.8125 2C9.335938 2.089844 8.992188 2.511719 9 3L9 18L4 18L4 43C4 45.757813 6.242188 48 9 48L41 48C43.757813 48 46 45.757813 46 43L46 18L41 18L41 3C41 2.449219 40.550781 2 40 2L10 2C9.96875 2 9.9375 2 9.90625 2C9.875 2 9.84375 2 9.8125 2 Z M 11 4L39 4L39 18L30.5 18C28.578125 18 27 19.578125 27 21.5C27 23.421875 28.578125 25 30.5 25L33 25C33.566406 25 34 25.433594 34 26C34 26.566406 33.566406 27 33 27L17 27C16.433594 27 16 26.566406 16 26C16 25.433594 16.433594 25 17 25L19.5 25C21.421875 25 23 23.421875 23 21.5C23 19.578125 21.421875 18 19.5 18L11 18 Z M 15.8125 8C15.261719 8.050781 14.855469 8.542969 14.90625 9.09375C14.957031 9.644531 15.449219 10.050781 16 10L34 10C34.359375 10.003906 34.695313 9.816406 34.878906 9.503906C35.058594 9.191406 35.058594 8.808594 34.878906 8.496094C34.695313 8.183594 34.359375 7.996094 34 8L16 8C15.96875 8 15.9375 8 15.90625 8C15.875 8 15.84375 8 15.8125 8 Z M 15.8125 12C15.261719 12.050781 14.855469 12.542969 14.90625 13.09375C14.957031 13.644531 15.449219 14.050781 16 14L29 14C29.359375 14.003906 29.695313 13.816406 29.878906 13.503906C30.058594 13.191406 30.058594 12.808594 29.878906 12.496094C29.695313 12.183594 29.359375 11.996094 29 12L16 12C15.96875 12 15.9375 12 15.90625 12C15.875 12 15.84375 12 15.8125 12 Z M 0 20L0 26L2 26L2 20 Z M 48 20L48 26L50 26L50 20 Z M 11 33C11.550781 33 12 33.449219 12 34C12 34.550781 11.550781 35 11 35C10.449219 35 10 34.550781 10 34C10 33.449219 10.449219 33 11 33 Z M 15 33C15.550781 33 16 33.449219 16 34C16 34.550781 15.550781 35 15 35C14.449219 35 14 34.550781 14 34C14 33.449219 14.449219 33 15 33 Z M 19 33C19.550781 33 20 33.449219 20 34C20 34.550781 19.550781 35 19 35C18.449219 35 18 34.550781 18 34C18 33.449219 18.449219 33 19 33 Z M 23 33C23.550781 33 24 33.449219 24 34C24 34.550781 23.550781 35 23 35C22.449219 35 22 34.550781 22 34C22 33.449219 22.449219 33 23 33 Z M 27 33C27.550781 33 28 33.449219 28 34C28 34.550781 27.550781 35 27 35C26.449219 35 26 34.550781 26 34C26 33.449219 26.449219 33 27 33 Z M 31 33C31.550781 33 32 33.449219 32 34C32 34.550781 31.550781 35 31 35C30.449219 35 30 34.550781 30 34C30 33.449219 30.449219 33 31 33 Z M 35 33C35.550781 33 36 33.449219 36 34C36 34.550781 35.550781 35 35 35C34.449219 35 34 34.550781 34 34C34 33.449219 34.449219 33 35 33 Z M 39 33C39.550781 33 40 33.449219 40 34C40 34.550781 39.550781 35 39 35C38.449219 35 38 34.550781 38 34C38 33.449219 38.449219 33 39 33 Z M 13 37C13.550781 37 14 37.449219 14 38C14 38.550781 13.550781 39 13 39C12.449219 39 12 38.550781 12 38C12 37.449219 12.449219 37 13 37 Z M 17 37C17.550781 37 18 37.449219 18 38C18 38.550781 17.550781 39 17 39C16.449219 39 16 38.550781 16 38C16 37.449219 16.449219 37 17 37 Z M 21 37C21.550781 37 22 37.449219 22 38C22 38.550781 21.550781 39 21 39C20.449219 39 20 38.550781 20 38C20 37.449219 20.449219 37 21 37 Z M 25 37C25.550781 37 26 37.449219 26 38C26 38.550781 25.550781 39 25 39C24.449219 39 24 38.550781 24 38C24 37.449219 24.449219 37 25 37 Z M 29 37C29.550781 37 30 37.449219 30 38C30 38.550781 29.550781 39 29 39C28.449219 39 28 38.550781 28 38C28 37.449219 28.449219 37 29 37 Z M 33 37C33.550781 37 34 37.449219 34 38C34 38.550781 33.550781 39 33 39C32.449219 39 32 38.550781 32 38C32 37.449219 32.449219 37 33 37 Z M 37 37C37.550781 37 38 37.449219 38 38C38 38.550781 37.550781 39 37 39C36.449219 39 36 38.550781 36 38C36 37.449219 36.449219 37 37 37 Z M 16 41L34 41C34.550781 41 35 41.449219 35 42C35 42.550781 34.550781 43 34 43L16 43C15.449219 43 15 42.550781 15 42C15 41.449219 15.449219 41 16 41Z" fill="#17B0E6" />
+                </svg>
+                <a href="./404.html">Blogs</a>
+            </div>
+
+            <div class="sub-menu-bar-items">
+                <div class="sub-items">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20" height="20">
+                        <path d="M15 3C7.82 3 2 7.925 2 14C2 16.676142 3.1322222 19.126093 5.0097656 21.033203C5.0476793 21.127522 6.0110131 23.606674 3.1582031 26.134766 A 0.5 0.5 0 0 0 3 26.5 A 0.5 0.5 0 0 0 3.5 27 A 0.5 0.5 0 0 0 3.6074219 26.988281C6.4832831 26.817905 8.9434573 25.390739 10.445312 24.291016C11.864706 24.741137 13.394827 25 15 25C22.18 25 28 20.075 28 14C28 7.925 22.18 3 15 3 z M 15 7.5C15.828 7.5 16.5 8.172 16.5 9C16.5 9.828 15.828 10.5 15 10.5C14.172 10.5 13.5 9.828 13.5 9C13.5 8.172 14.172 7.5 15 7.5 z M 14 13L16 13L16 20L14 20L14 13 z" fill="#17B0E6" />
+                        </svg>
+                    <a href="./about_us.html">About Us</a>
+                </div>
+                <div class="sub2-menu-bar-items">
+                    <a href="./contact_us.html">Contact Us</a>
+                    <a href="./404.html">Careers</a>
+                </div>
+                <div class="sub-items">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20" height="20">
+                        <path d="M4 2C3.448 2 3 2.448 3 3L3 24C3 26.209 4.791 28 7 28L22 28L23 28L24 28C26.209 28 28 26.209 28 24L28 10C28 9.448 27.552 9 27 9L25 9L25 24C25 24.553 24.552 25 24 25C23.448 25 23 24.553 23 24L23 3C23 2.448 22.552 2 22 2L4 2 z M 6 6L20 6L20 9L6 9L6 6 z M 6 13L12 13L12 15L6 15L6 13 z M 14 13L20 13L20 15L14 15L14 13 z M 6 17L12 17L12 19L6 19L6 17 z M 14 17L20 17L20 19L14 19L14 17 z M 6 21L12 21L12 23L6 23L6 21 z M 14 21L20 21L20 23L14 23L14 21 z" fill="#17B0E6" />
+                        </svg>
+                    <a href="./404.html">News</a>
+                </div>
+                <div class="sub2-menu-bar-items">
+                    <a href="./blog_technews.html">Technology News</a>
+                    <a href="./404.html">Reviews</a>
+                    
+                </div>
+                <div class="sub-items">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20">
+                        <path d="M11 2L11 15L5 15C3.346 15 2 16.346 2 18L2 36C2 37.654 3.346 39 5 39L11 39L11 48L39 48L39 39L45 39C46.654 39 48 37.654 48 36L48 18C48 16.346 46.654 15 45 15L39 15L39 2L11 2 z M 13 4L37 4L37 15L13 15L13 4 z M 41 20C42.105 20 43 20.895 43 22C43 23.105 42.105 24 41 24C39.895 24 39 23.105 39 22C39 20.895 39.895 20 41 20 z M 13 30L37 30L37 39L37 46L13 46L13 39L13 30 z M 17 33 A 1.0001 1.0001 0 1 0 17 35L33 35 A 1.0001 1.0001 0 1 0 33 33L17 33 z M 17 37 A 1.0001 1.0001 0 1 0 17 39L29 39 A 1.0001 1.0001 0 1 0 29 37L17 37 z M 17 41 A 1.0001 1.0001 0 1 0 17 43L33 43 A 1.0001 1.0001 0 1 0 33 41L17 41 z" fill="#17B0E6" />
+                        </svg>
+                    <a href="./404.html">Printed Materials</a>
+                </div>
+            </div>
+
+            <div class="menu-bar-items">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M3.5 3C2.673 3 2 3.673 2 4.5L2 9L3 9L3 19C3 20.103 3.897 21 5 21L19 21C20.103 21 21 20.103 21 19L21 9L22 9L22 4.5C22 3.673 21.327 3 20.5 3L3.5 3 z M 4 5L20 5L20 7L4 7L4 5 z M 5 9L19 9L19.001953 19L5 19L5 9 z M 13 15L13 17L17 17L17 15L13 15 z" fill="#17B0E6" />
+                </svg>
+                <a href="/products.html">Products</a>
+            </div>
+
+            <div class="sub-menu-bar-items">
+                <div class="sub2-items">
+                    <a href="">Keyboards + Mouse</a>
+                    <a href="">Headsets + Speakers</a>
+                    <a href="">Cables + Changers</a>
+                    <a href="">Webcam</a>
+                    <a href="">USB</a>
+                    <a href="">Joysticks</a>
+                </div>
+            </div>
+
+            <div class="menu-bar-items">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M13,19h-2v-2h2V19z M15.07,11.25l-0.9,0.92 C13.45,12.9,13,13.5,13,15h-2v-0.5c0-1.1,0.45-2.1,1.17-2.83l1.24-1.26C13.78,10.05,14,9.55,14,9c0-1.1-0.9-2-2-2s-2,0.9-2,2H8 c0-2.21,1.79-4,4-4s4,1.79,4,4C16,9.88,15.64,10.68,15.07,11.25z" fill="#17B0E6" />
+                    </svg>
+                <a href="/support_faqs.html">Support</a>
+            </div>
+
+            <div class="sub-menu-bar-items">
+                <div class="sub-items">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20">
+                        <path d="M6 3L6 29L26 29L26 9.59375L25.71875 9.28125L19.71875 3.28125L19.40625 3 Z M 8 5L18 5L18 11L24 11L24 27L8 27 Z M 20 6.4375L22.5625 9L20 9 Z M 11 13L11 15L21 15L21 13 Z M 11 17L11 19L21 19L21 17 Z M 11 21L11 23L21 23L21 21Z" fill="#17B0E6" />
+                        </svg>
+                    <a href="">Legal Documents</a>
+                </div>
+                <div class="sub2-menu-bar-items">
+                    <a href="">Privacy</a>
+                    <a href="">Installment</a>
+                    <a href="">Logistics</a>
+                    <a href="">Warranty</a>
+                    <a href="">Returns</a>
+                </div>
+                <div class="sub-items">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20">
+                        <path d="M27 4C22.047202 4 18 8.0472057 18 13C18 17.952794 22.047202 22 27 22C31.952798 22 36 17.952794 36 13C36 8.0472057 31.952798 4 27 4 z M 27 7.2792969C27.134307 7.5026267 27.294175 7.7858091 27.4375 8.2695312C27.789682 9.4581475 28 11.236111 28 13C28 14.763889 27.789682 16.541853 27.4375 17.730469C27.294175 18.214191 27.134307 18.497373 27 18.720703C26.865693 18.497373 26.705825 18.214191 26.5625 17.730469C26.210318 16.541853 26 14.763889 26 13C26 11.236111 26.210318 9.4581475 26.5625 8.2695312C26.705825 7.7858091 26.865693 7.5026267 27 7.2792969 z M 23.519531 8.1074219C23.166397 9.5881798 23 11.281924 23 13C23 14.718076 23.166397 16.41182 23.519531 17.892578C21.992643 16.80851 21 15.029237 21 13C21 10.970764 21.992643 9.1914896 23.519531 8.1074219 z M 30.480469 8.1074219C32.007357 9.1914896 33 10.970764 33 13C33 15.029237 32.007357 16.80851 30.480469 17.892578C30.833603 16.41182 31 14.718076 31 13C31 11.281924 30.833603 9.5881798 30.480469 8.1074219 z M 43.367188 21.005859C42.341187 21.005859 41.214313 21.679875 38.820312 22.921875C36.837313 23.951875 35.004844 24.930531 33.839844 25.644531C33.940844 26.082531 34 26.537859 34 27.005859C34 30.314859 31.308 33.005859 28 33.005859L20.5 33.005859C19.672 33.005859 19 32.334859 19 31.505859C19 30.676859 19.672 30.005859 20.5 30.005859L28 30.005859C29.654 30.005859 31 28.659859 31 27.005859C31 26.108859 30.596703 25.310766 29.970703 24.759766C29.259703 24.289766 28.415 24.005859 27.5 24.005859L23.107422 24.005859L22.5 24.005859C22.471 24.005859 22.443062 23.998094 22.414062 23.996094C19.778063 23.955094 18.513391 23.6825 17.400391 23.4375C16.388391 23.2145 15.431172 23.005859 13.826172 23.005859C6.4941719 23.005859 2.3087656 32.005672 2.1347656 32.388672C1.9087656 32.884672 1.9699687 33.462391 2.2929688 33.900391L9.2929688 43.394531C9.5779688 43.781531 10.026094 44 10.496094 44C10.591094 44 10.68625 43.990656 10.78125 43.972656C11.34725 43.864656 11.804172 43.437859 11.951172 42.880859C12.030172 42.585859 12.795 40.005859 15.5 40.005859C17.452 40.005859 19.470828 40.257 21.423828 40.5C23.412828 40.749 25.471 41.005859 27.5 41.005859C30.263 41.005859 32.252 38.886859 38 33.005859C45.302 25.534859 46 24.881391 46 23.400391C46 22.118391 44.875188 21.005859 43.367188 21.005859 z" fill="#17B0E6" />
+                        </svg>
+                    <a href="">Customer Cares</a>
+                </div>
+                <div class="sub2-menu-bar-items">
+                    <a href="">Report Problems</a>
+                    <a href="">FAQs</a>
+                </div>
+            </div>
+
+            <div class="menu-bar-items">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20">
+                    <path d="M21.5 5C19.57 5 18 6.57 18 8.5L18 25.5C18 25.565 18.016531 25.625453 18.019531 25.689453L21 23.917969L21 11C22.66 11 24 9.66 24 8L44.5 8C45.329 8 46 7.328 46 6.5C46 5.672 45.329 5 44.5 5L21.5 5 z M 37 10C33.691 10 31 13.141 31 17C31 20.859 33.691 24 37 24C40.309 24 43 20.859 43 17C43 13.141 40.309 10 37 10 z M 25 15 A 2 2 0 0 0 25 19 A 2 2 0 0 0 25 15 z M 16 15.496094L13.060547 16.400391C11.319547 16.935391 9.8321406 18.086344 8.8691406 19.652344L2.2148438 30.728516C2.0698437 30.970516 2.0058594 31.237 2.0058594 31.5L2 31.5L2 41.5C2 42.328 2.672 43 3.5 43L11.669922 43C13.840922 43 15.909234 42.181312 17.490234 40.695312L29.878906 29.220703C30.588906 28.547703 30.986 27.638156 31 26.660156C31.014 25.682156 30.638266 24.764266 29.947266 24.072266C28.749266 22.873266 26.912187 22.671219 25.492188 23.574219L16.697266 28.789062C16.456266 28.933063 16.191641 29 15.931641 29C15.419641 29 14.920625 28.738578 14.640625 28.267578C14.217625 27.554578 14.452063 26.633938 15.164062 26.210938L16 25.714844L16 15.496094 z M 32.941406 26C32.966406 26.228 33.003 26.4535 33 26.6875C32.989 27.5035 32.793125 28.283 32.453125 29L44.5 29C45.329 29 46 28.328 46 27.5C46 26.672 45.329 26 44.5 26L32.941406 26 z" fill="#17B0E6" />
+                    </svg>
+                <a href="/payment_carts.html">Payment</a>
+            </div>
+
+            <div class="sub-menu-bar-items">
+                <div class="sub2-items">
+                    <a href="">Guides</a>
+                    <a href="">Your Carts</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-bar-bottom">
+            <div>© 2022 - Ant Plugins, All Rights Reserved.</div>
+        </div>
+    </nav>
 
     <!-- ========== Breadcrumb Nagivation Section ========== -->
     <section class="breadcrumb padding-all max-container">
@@ -66,6 +376,7 @@
             </p>
         </div>
     </section>
+
     <!-- ========== Contact Us Section ========== -->
     <section class="contact-us padding-all max-container">
         <div class="contact-headers">
@@ -87,28 +398,28 @@
                     <div class="form-candidate">
                         <div class="name-request">
                             <label for="Name">Your Name:</label>
-                            <input type="text" id="fname" name="Name" placeholder="e.g. Harry Jake"><br>
+                            <input type="text" name="Name" placeholder="e.g. Harry Jake"><br>
                         </div>
 
                         <div class="name-request">
                             <label for="Numbers">Phone Numbers:</label>
-                            <input type="text" id="lname" name="Phone Numbers" placeholder="e.g. (+84) 987 654 321">
+                            <input type="text" name="Phone Numbers" placeholder="e.g. (+84) 987 654 321">
                         </div>
 
                         <div class="name-request">
                             <label for="Emails">Emails:</label>
-                        <input type="text" id="lname" name="Emails" placeholder = "e.g. harrylee.global.93@gmail.com">
+                        <input type="text" name="Emails" placeholder = "e.g. harrylee.global.93@gmail.com">
                         </div>
 
                         <div class="name-request">
                             <label for="Subject">Subject:</label>
-                            <input type="text" id="lname" name="Subject" placeholder="e.g.Resquest a demo project">
+                            <input type="text" name="Subject" placeholder="e.g.Resquest a demo project">
                         </div>
                     </div>
 
                     <div class="form-message">
                         <label for="Message">Message:</label>
-                        <input type="text" id="lname" name="Message" placeholder="Enter your message ...">
+                        <input type="text" name="Message" placeholder="Enter your message ...">
                     </div>
                 </div>
 
