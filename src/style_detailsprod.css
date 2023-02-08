@@ -1288,6 +1288,20 @@ p {
     margin: 0 var(--mdDis);
 }
 
+.swiper-slide-thumb-active{
+    border: 2px solid var(--mainColor1);
+    border-radius: 5px;
+}
+
+.left-col .mySwiper .swiper-slide{
+    opacity: 1;
+    height: 110px;
+}
+
+.left-col .mySwiper{
+    height: 130px;
+}
+
 @media (min-width: 970px) {
     .products-display{
         display: grid;
