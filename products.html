@@ -72,7 +72,7 @@
                                         <a href="./contact_us.html">Contact Us</a>
                                     </div>
                                     <div class="blog-career">
-                                        <a href="">Careers</a>
+                                        <a href="./404.html">Careers</a>
                                     </div>
                                 </div>
 
@@ -663,7 +663,7 @@
                     Products
                 </p>
 
-                <button class="filter-button display-none">
+                <button class="filter-button display-none" onclick="toggleFilterNav()">
                     Filter
                 </button>
             </div>
@@ -1514,6 +1514,186 @@
             </script>
         </div>
     </section>
+
+    <div class="filter-nav">
+        <div class = "top-menu-bar">
+            <p>FILTER</p>
+            <svg class = "close-btn" onclick="toggleFilterNav()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+                <path d="M7.21875 5.78125L5.78125 7.21875L14.5625 16L5.78125 24.78125L7.21875 26.21875L16 17.4375L24.78125 26.21875L26.21875 24.78125L17.4375 16L26.21875 7.21875L24.78125 5.78125L16 14.5625Z" fill="#404040" />
+            </svg>
+        </div>
+
+        <div class="filter-option">
+            <div class = "type-filter">
+                <p class = "filter-text">Type of Products</p>
+
+                <label class="typeform-control">
+                    <input type="checkbox" name="checkbox" />
+                    Mouse and Keyboards
+                </label>
+                
+                <label class="typeform-control">
+                    <input type="checkbox" name="checkbox" />
+                    Headsets and Speakers
+                </label>
+
+                <label class="typeform-control">
+                    <input type="checkbox" name="checkbox" />
+                    Cable and Chargers
+                </label>
+
+                <label class="typeform-control">
+                    <input type="checkbox" name="checkbox" />
+                    Webcam
+                </label>
+
+                <label class="typeform-control">
+                    <input type="checkbox" name="checkbox" />
+                    USB
+                </label>
+
+                <label class="typeform-control">
+                    <input type="checkbox" name="checkbox" />
+                    Joysticks
+                </label>
+            </div>
+
+            <div class = "type-filter">
+                <p class = "filter-text">Price Range:</p>
+
+                <p>Use Slider or enter min and max price:</p>
+
+                <div class="slider-input">
+                    <div class="progress"></div>
+                    <div class="range-input">
+                        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                    </div>
+                </div>
+
+                <div class="filter-input">
+                    <div class="price-input">
+                        <input type="text" placeholder="Minimum...">
+                        <input type="text" placeholder="Maximum...">
+                    </div>
+                </div>
+            </div>
+
+            <div class = "type-filter">
+                <p class = "filter-text">Prefered Brands:</p>
+
+                <div class="filter-input">
+                    <input class = "input-text" type="text" placeholder="Input brand's name...">
+
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="25" height="25">
+                            <path d="M4 4 A 1.0001 1.0001 0 1 0 4 6L4.8007812 6L12 15L18 15L25.199219 6L26 6 A 1.0001 1.0001 0 1 0 26 4L4 4 z M 12 17L12 26L18 24L18 17L12 17 z" fill = "#FAFAFA"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="filter-form">
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox"/> Logitech
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox"/> Xiaomi
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> Ankers
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> Sony
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> Zadez
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> UBL Harman
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> Microlab
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> MSI
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> HyperX
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> Rapoo
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> Corsair
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> Prolink
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" /> Senheiser
+                    </label>
+                </div>
+            </div>
+
+            <div class = "type-filter">
+                <p class = "filter-text">Utilities:</p>
+                <div class="filter-form">
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" />
+                        Home Office
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" />
+                        For Gaming
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" />
+                        For Outside
+                    </label>
+
+                    <label class="typeform-control">
+                        <input type="checkbox" name="checkbox" />
+                        For Meeting
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-nav-bottom">
+            <div>© 2022 - Ant Plugins, All Rights Reserved.</div>
+        </div>
+    </div>
+
+    <script>
+        // Account-click
+        const filter_nav = document.querySelector(".filter-nav");
+
+        function toggleFilterNav() {
+            if (filter_nav.classList.contains("show-filter-nav")) {
+                filter_nav.classList.remove("show-filter-nav");
+            } else {
+                filter_nav.classList.add("show-filter-nav");
+            }
+
+            if (menu.classList.contains("showMenu")) {
+                menu.classList.remove("showMenu");
+            } 
+        }
+    </script>
 
     <!-- ========== Footer Section ========== -->
     <footer class="footer max-container padding-all">
