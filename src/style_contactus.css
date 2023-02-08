@@ -113,7 +113,7 @@ p {
     color: var(--mainColor1);
 }
 
-/* ========== Contact Us - Heading Section ========== */
+/* ========== Blog Technical News - Heading Section ========== */
 .top-header{
     height: 100px;
     background-color: var(--whitecolor2);
@@ -739,6 +739,17 @@ p {
     left: var(--mdDis);
 }
 
+.form-request input#fname, 
+.form-request input#pass{
+    margin: var(--tnDis) 0;
+    height: 33px;
+    padding-left: var(--smDis);
+    width: 255px;
+    font-style: italic;
+    border-radius: 5px;
+    border: var(--darkcolor) solid 1px;
+}
+
 .your-account-panel .account-login-form .typeform-control{
     display: flex;
     /* justify-content: center; */
@@ -836,7 +847,7 @@ p {
     }
 }
 
-/* ========== Contact Us - Navigation Section ========== */
+/* ========== Blog Technical News - Navigation Section ========== */
 .menu-bar{
     position: fixed;
     height: 100vh;
@@ -1196,7 +1207,8 @@ p {
 
 .footer-copyright .back-to-top{
     background-color: var(--maincolor1L);
-    border: 2px solid var(--whitecolor);
+    /* border: 2px solid var(--whitecolor); */
+    border: none;
     border-radius: 3px;
     display: flex;
     align-items: center;

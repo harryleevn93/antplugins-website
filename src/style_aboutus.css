@@ -161,10 +161,6 @@ p {
     position: relative;
 }
 
-.list-item .active-list a{
-    color: var(--mainColor1);
-}
-
 .list-item .active-list::after{
     content: "";
     height: 5px;
@@ -1127,7 +1123,8 @@ p {
 
 .footer-copyright .back-to-top{
     background-color: var(--maincolor1L);
-    border: 2px solid var(--whitecolor);
+    /* border: 2px solid var(--whitecolor); */
+    border: none;
     border-radius: 3px;
     display: flex;
     align-items: center;

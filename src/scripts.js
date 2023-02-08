@@ -19,6 +19,14 @@ function toggleMenu() {
     menu.classList.add("showMenu");
   }
 
+  if (filter_nav.classList.contains("show-filter-nav")) {
+    filter_nav.classList.remove("show-filter-nav");
+  }
+
+  if (achieve_nav.classList.contains("show-achieve-nav")) {
+    achieve_nav.classList.remove("show-achieve-nav");
+  }
+
   if (search_bar.classList.contains("show-searchbar")) {
     search_bar.classList.remove("show-searchbar");
   }
