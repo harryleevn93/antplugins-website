@@ -32,12 +32,11 @@ html {
     --maincolor1L: #45BCE6;
     --whitecolor: #fafafa; 
     --whitecolor2: #f2f2f2;
+    --subwhitecolor: #efefef;
     --maincolorgradient: linear-gradient(-45deg, #17B0E6 0%, #45BCE6 100%);
     --darkcolor: #404040;
     --darkcolor2: #0D0D0D;
     --mediancolor: #808080;
-    --whitecolor: #fafafa;
-    --subwhitecolor: #efefef;
     --redsalecolor: #EC1313;
 
     --font1: 'Merriweather Sans', sans-serif;
@@ -906,7 +905,7 @@ p {
     flex-direction: column;
     gap: var(--tnDis);
     padding: var(--smDis);
-    height: 75vh;
+    height: 80vh;
     overflow: scroll;
 }
 
@@ -1482,8 +1481,8 @@ p {
 
 .footer-copyright .back-to-top{
     background-color: var(--maincolor1L);
-    /* border: 2px solid var(--whitecolor); */
-    border: none;
+    border: 2px solid var(--whitecolor);
+    /* border: none; */
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -1547,5 +1546,13 @@ p {
         padding-top: var(--mdDis);
         display: block;
         gap: var(--mdDis);
+    }
+
+    .footer-copyright{
+        display: block;
+    }
+
+    .footer-copyright .back-to-top{
+        margin-top: var(--smDis);
     }
 }
