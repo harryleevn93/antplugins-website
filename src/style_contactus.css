@@ -1142,6 +1142,16 @@ p {
     }
 }
 
+@media (max-width: 640px){
+    .contact-forms .request .form-request .form-candidate{
+        display: flex;
+        flex-direction: column;
+        gap: var(--smDis);
+        margin-bottom: var(--smDis);
+    }
+    
+}
+
 /* ========== Contact Us - Footer Section ========== */
 .footer{
     background-color: #1289B3;
